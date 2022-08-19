@@ -47,7 +47,7 @@ format:
     html-math-method: katex
     include-in-header:
       - includes.html
-    highlight-style: tango
+    highlight-style: github
 
 execute:
   freeze: auto

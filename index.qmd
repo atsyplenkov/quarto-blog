@@ -11,6 +11,8 @@ page-layout: full
 title-block-banner: false
 toc: false
 comments: false
+image: "featured.webp"
+image-alt: "Technical notes about R, sediments and maps"
 ---
 
 ### Hi, my name is Anatoly!
