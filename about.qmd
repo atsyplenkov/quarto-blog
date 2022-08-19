@@ -1,8 +1,12 @@
 ---
-title: "About"
+title: "About me"
 ---
 
-I am currently the Junior Research Fellow at the Faculty of Geography at the Lomonosov Moscow State University. Below is my brief bio, while a full {{< ai cv size=lg >}} can be downloaded [here {{< fa solid file-pdf size=lg >}}](data/Tsyplenkov-Anatoly_CV.pdf).
+After a hydrologist license in Lomonosov Moscow State University (MSc.) and several research trips to mountains (Kamchatka and Caucasus), where I was mostly interested in water quality issues (particularly suspended sediments), I became a hydrology/geomorphology Ph.D. student in the pursuit of multi-disciplinarity -- the only efficient way to address real-world problems and fundamental science.
+
+Following my Ph.D. defense at Lomonosov Moscow State University in December 2019, I received a Junior Research Fellow position in the Laboratory of Fluvial Processes and Soil Erosion at Faculty of Geography.
+
+Below is my brief bio, while a full {{< ai cv size=lg >}} can be downloaded [here {{< fa solid file-pdf size=lg >}}](data/Tsyplenkov-Anatoly_CV.pdf).
 
 ### Research Interests
 
@@ -31,7 +35,7 @@ Granted Dec 2019
 ::: {.d-flex .justify-content-between}
 ::: {}
 **Lomonosov Moscow State University**  
-Specialist in Hydrology (MSc equivalent)
+Specialist in Hydrology (MSc. equivalent)
 :::
 ::: {.text-end}
 Moscow, Russia  
@@ -62,7 +66,7 @@ April 2020 - present
 **Lomonosov Moscow State University**  
 :::
 ::: {.text-end}
-Jan 2020 - present
+January 2020 - present
 :::
 :::
 *Junior Research Fellow*
@@ -77,7 +81,7 @@ Jan 2020 - present
 **State Institute of Oceanography (Russia, Moscow)**  
 :::
 ::: {.text-end}
-Aug 2015 - Aug 2017
+August 2015 - August 2017
 :::
 :::
 *Technician*

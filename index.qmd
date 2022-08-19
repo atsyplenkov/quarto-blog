@@ -1,14 +1,18 @@
 ---
-title: "Posts"
+title: ""
 listing:
   contents: posts
   sort: "date desc"
   type: default
-  categories: cloud
+  categories: true
   sort-ui: false
   filter-ui: false
 page-layout: full
 title-block-banner: false
+toc: false
 ---
 
+### Hi, my name is Anatoly!
+I did my Ph.D. at the Lomonosov Moscow State University, where I was interested in the spatio-temporal variability of sediment transport in mountain areas, and a postdoc at the Institute of Geography Russian Academy of Science, where I focused on remote sensing and geomorphology in the Caucasus. While a hydrologist and fluvial geomorphologist at the core, I am fascinated by creative ways to [visualize the data](#category=tidytuesday) (what dataviz designers do), and by transformative technologies [to extract and disseminate knowledge from data](#category=R) (what computer scientists do). My passion as a researcher is to integrate insights from these fields in a useful way to promote equitable and sustainable global access to safe water and energy.
 
+## My notes

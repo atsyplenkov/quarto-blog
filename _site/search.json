@@ -2,9 +2,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About me",
     "section": "",
-    "text": "Research Interests\n\nMountain fluvial geomorphology\nSediment budget and dynamics\nSoil erosion modeling\nStatistical analyses on heterogeneous datasets and quantifying uncertainties based on Monte Carlo simulation techniques\nDesigning and maintaining large databases of measurements on various geomorphic processes\nQuantifying and understanding geomorphic processes at catchment and regional scale\n\n\n\nEducation\n\n\nLomonosov Moscow State University\nPhD in Geographic Sciences (Hydrology)\nAdvisors: Valentin Golosov, Sergey Chalov\n\n\nMoscow, Russia\nGranted Dec 2019\n\n\n\nDissertation: Suspended sediment load formation in small mountain river basins: general patterns and regional features\n\n\n\nLomonosov Moscow State University\nSpecialist in Hydrology (MSc equivalent)\n\n\nMoscow, Russia\nGranted June 2015\n\n\n\n\nExperience\n\n\nInstitute of Geography Russian Academy of Science\n\n\nApril 2020 - present\n\n\nPostdoctoral Researcher\n\nWorking for the RSF grant No. 19‑17‑00181 “Quantitative assessment of the slope sediment flux and its changes in the Holocene for the Caucasus mountain rivers”\nSediment source fingerprinting analysis in small mountain basins\nSuspended sediment modelling on a regional scale (Caucasus)\nStudying short‑term and long water discharge and suspended sediment dynamics\nDeveloped an R package for exploring intra‑event suspended sediment dynamics loadflux\n\n\n\nLomonosov Moscow State University\n\n\nJan 2020 - present\n\n\nJunior Research Fellow\n\nOrganized two international conferences and two schools for young researchers\nEstimated soil erosion for the Eastern Russia (Siberia, Kamcharka, Chukotka)\nDeveloped algorithm to process short‑term logger data (turbidity and water level)\nDeveloped framework for assessing lateral erosion rates (and volumes) for Arctic rivers\n\n\n\nState Institute of Oceanography (Russia, Moscow)\n\n\nAug 2015 - Aug 2017\n\n\nTechnician\n\nConducting hydrological measurements: water discharge, water stage, river velocity, river and lake bathymetry\nEquipment service: ADCPs, sonars, current meters\nStatistical analysis of main hydrological parameters (AEP, max and min discharges, etc.)\nFlood risk mapping for the Moscow city"
+    "text": "Following my Ph.D. defense at Lomonosov Moscow State University in December 2019, I received a Junior Research Fellow position in the Laboratory of Fluvial Processes and Soil Erosion at Faculty of Geography.\nBelow is my brief bio, while a full  can be downloaded here .\n\nResearch Interests\n\nMountain fluvial geomorphology\nSediment budget and dynamics\nSoil erosion modeling\nStatistical analyses on heterogeneous datasets and quantifying uncertainties based on Monte Carlo simulation techniques\nDesigning and maintaining large databases of measurements on various geomorphic processes\nQuantifying and understanding geomorphic processes at catchment and regional scale\n\n\n\nEducation\n\n\nLomonosov Moscow State University\nPhD in Geographic Sciences (Hydrology)\nAdvisors: Valentin Golosov, Sergey Chalov\n\n\nMoscow, Russia\nGranted Dec 2019\n\n\n\nDissertation: Suspended sediment load formation in small mountain river basins: general patterns and regional features\n\n\n\nLomonosov Moscow State University\nSpecialist in Hydrology (MSc. equivalent)\n\n\nMoscow, Russia\nGranted June 2015\n\n\n\n\nExperience\n\n\nInstitute of Geography Russian Academy of Science\n\n\nApril 2020 - present\n\n\nPostdoctoral Researcher\n\nWorking for the RSF grant No. 19‑17‑00181 “Quantitative assessment of the slope sediment flux and its changes in the Holocene for the Caucasus mountain rivers”\nSediment source fingerprinting analysis in small mountain basins\nSuspended sediment modelling on a regional scale (Caucasus)\nStudying short‑term and long water discharge and suspended sediment dynamics\nDeveloped an R package for exploring intra‑event suspended sediment dynamics loadflux\n\n\n\nLomonosov Moscow State University\n\n\nJanuary 2020 - present\n\n\nJunior Research Fellow\n\nOrganized two international conferences and two schools for young researchers\nEstimated soil erosion for the Eastern Russia (Siberia, Kamcharka, Chukotka)\nDeveloped algorithm to process short‑term logger data (turbidity and water level)\nDeveloped framework for assessing lateral erosion rates (and volumes) for Arctic rivers\n\n\n\nState Institute of Oceanography (Russia, Moscow)\n\n\nAugust 2015 - August 2017\n\n\nTechnician\n\nConducting hydrological measurements: water discharge, water stage, river velocity, river and lake bathymetry\nEquipment service: ADCPs, sonars, current meters\nStatistical analysis of main hydrological parameters (AEP, max and min discharges, etc.)\nFlood risk mapping for the Moscow city"
   },
   {
     "objectID": "data/!publ_list.html",
@@ -23,9 +23,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Posts",
+    "title": "Anatoly Tsyplenkov",
     "section": "",
-    "text": "R\n\n\nsoil erosion\n\n\n\n\n\n\n\n\n\n\n\nMar 5, 2022\n\n\nAnatoly Tsyplenkov\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR\n\n\ntidytuesday\n\n\n\n\n\n\n\n\n\n\n\nMar 3, 2020\n\n\nAnatoly Tsyplenkov\n\n\n\n\n\n\nNo matching items"
+    "text": "I did my Ph.D. at the Lomonosov Moscow State University, where I was interested in the spatio-temporal variability of sediment transport in mountain areas, and a postdoc at the Institute of Geography Russian Academy of Science, where I focused on remote sensing and geomorphology in the Caucasus. While a hydrologist and fluvial geomorphologist at the core, I am fascinated by creative ways to visualize the data (what dataviz designers do), and by transformative technologies to extract and disseminate knowledge from data (what computer scientists do). My passion as a researcher is to integrate insights from these fields in a useful way to promote equitable and sustainable global access to safe water and energy."
   },
   {
     "objectID": "papers.html",
@@ -54,5 +54,19 @@
     "title": "Software",
     "section": "",
     "text": "The goal of HBVr is to ease the accessebility of HBV Global Parameter maps created by Beck et al. (2020). Therefore this one-function package allows to download any of the cross-validation folds for your particular area of interest (AOI).\n\n        \n        Website\n     \n        \n        Github\n    \nrusleR\n This package offers an R implementation of the Universal Soil Loss Equation (USLE). You can find here a collection of functions to estimate main factors: R-factor, K-factor, LS-factor and C-factor. The package uses terra and Rsagacmd in the backend.\n\n        \n        Website\n     \n        \n        Github\n    \nloadflux\n The loadflux package is build for the comprehensive analysis of the intra-event suspended sediment dynamics. This is a collection of functions created to study water discharge (Q) and suspended sediment concentration (SSC) relationship.\n\n        \n        Website\n     \n        \n        Github\n     \n        \n        Package\n    \ntgme\n This is a very simple package with only one function tgme. The aim of this package is to send you a message when a job on Rstudio server is done (or on your local machine).\nIt is a free alternative to the Rich Pauloo’s textme package.\n\n        \n        Github"
+  },
+  {
+    "objectID": "index.html#posts",
+    "href": "index.html#posts",
+    "title": "Anatoly Tsyplenkov",
+    "section": "Posts",
+    "text": "Posts"
+  },
+  {
+    "objectID": "index.html#my-notes",
+    "href": "index.html#my-notes",
+    "title": "Anatoly Tsyplenkov",
+    "section": "My notes",
+    "text": "My notes"
   }
 ]
