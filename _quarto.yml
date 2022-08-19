@@ -11,10 +11,6 @@ website:
   twitter-card: 
     creator: "@atsyplen"
     card-style: "summary_large_image"
-  cookie-consent:
-    type: express
-    style: standalone
-    palette: light
   navbar:
     background: dark
     foreground: light
@@ -35,6 +31,17 @@ website:
         href: https://scholar.google.com/citations?user=IcwW-WAAAAAJ&hl=en
       - text: "{{< ai researchgate size=xl >}}"
         href: https://www.researchgate.net/profile/Anatolii_Tsyplenkov
+  page-footer:
+    left: "Anatoly Tsyplenkov, 2022. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)"
+    right:
+      - icon: github
+        href: https://github.com/atsyplenkov/
+      - icon: twitter
+        href: https://twitter.com/atsyplen
+      - icon: envelope
+        href: mailto:atsyplenkov@gmail.com
+    
+
 format:
   html:
     theme: 
@@ -42,7 +49,6 @@ format:
     css: styles.css
     toc: true
     toc-depth: 4
-    toc-title: "Contents"
     html-math-method: katex
     include-in-header: meta.html
     highlight-style: github
