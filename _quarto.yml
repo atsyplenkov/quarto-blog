@@ -30,6 +30,8 @@ website:
         href: https://github.com/atsyplenkov
       - icon: twitter
         href: https://twitter.com/atsyplen
+      - text: "{{< fa brands telegram size=xl >}}"
+        href: https://t.me/hydroNSR
       - text: "{{< ai google-scholar size=xl >}}"
         href: https://scholar.google.com/citations?user=IcwW-WAAAAAJ&hl=en
       - text: "{{< ai researchgate size=xl >}}"
