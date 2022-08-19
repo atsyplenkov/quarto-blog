@@ -44,7 +44,7 @@ format:
     toc-depth: 4
     toc-title: "Contents"
     html-math-method: katex
-    include-in-header: includes.html
+    include-in-header: meta.html
     highlight-style: github
 
 execute:
