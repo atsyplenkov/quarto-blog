@@ -11,7 +11,7 @@ website:
   twitter-card: 
     creator: "@atsyplen"
     site: "@atsyplen"
-    image: "/data/social-media-logo.webp"
+    image: "social-media-logo.webp"
     description: "Technical notes about R, sediments and maps"
     card-style: "summary_large_image"
   cookie-consent:
