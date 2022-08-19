@@ -49,5 +49,9 @@ format:
 
 execute:
   freeze: auto
+  
+comments:
+  giscus:
+    repo: atsyplenkov/quarto-blog
 
 
