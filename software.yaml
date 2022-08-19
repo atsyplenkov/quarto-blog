@@ -1,0 +1,38 @@
+- title: "tgme"
+  description: |
+    This is a very simple package with only one function `tgme`. The aim of this 
+    package is to send you a message when a job on Rstudio server is done (or on
+    your local machine).
+    
+    It is a free alternative to the [Rich Pauloo's](https://github.com/richpauloo) 
+    [`textme`](https://github.com/richpauloo/textme) package.
+  github: https://github.com/atsyplenkov/tgme
+  logo: https://raw.githubusercontent.com/atsyplenkov/tgme/master/man/figures/logo.svg
+- title: "loadflux"
+  description: |
+    The `loadflux` package is build for the comprehensive analysis of the 
+    intra-event suspended sediment dynamics. This is a collection of functions 
+    created to study water discharge (`Q`) and suspended sediment concentration 
+    (`SSC`) relationship.
+  website: https://atsyplenkov.github.io/loadflux/
+  github: https://github.com/atsyplenkov/loadflux
+  package: https://cran.r-project.org/package=loadflux
+  logo: https://raw.githubusercontent.com/atsyplenkov/loadflux/master/man/figures/logo.svg
+- title: "rusleR"
+  description: |
+    This package offers an `R` implementation of the Universal Soil Loss
+    Equation (USLE). You can find here a collection of functions to estimate 
+    main factors: R-factor, K-factor, LS-factor and C-factor. The package uses 
+    `terra` and `Rsagacmd` in the backend.
+  website: https://atsyplenkov.github.io/rusleR/
+  github: https://github.com/atsyplenkov/rusleR
+  logo: https://raw.githubusercontent.com/atsyplenkov/rusleR/master/man/figures/logo.svg
+- title: "HBVr"
+  description: |
+    The goal of `HBVr` is to ease the accessebility of [HBV Global Parameter 
+    maps](http://www.gloh2o.org/hbv/) created by Beck et al. ([2020](https://doi.org/10.1029/2019JD031485)). 
+    Therefore this one-function package allows to download any of the cross-validation 
+    folds for your particular area of interest (AOI).
+  website: https://atsyplenkov.github.io/HBVr/
+  github: https://github.com/atsyplenkov/HBVr
+  logo: https://raw.githubusercontent.com/atsyplenkov/HBVr/master/man/figures/logo.webp

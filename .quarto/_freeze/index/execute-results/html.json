@@ -1,0 +1,14 @@
+{
+  "hash": "7c80b31fc3d930ec09801248264e5368",
+  "result": {
+    "markdown": "---\ntitle: \"quarto-blog\"\nlisting:\n  contents: posts\n  sort: \"date desc\"\n  type: default\n  categories: true\n  sort-ui: false\n  filter-ui: false\npage-layout: full\n# title-block-banner: true\n---\n\n::: {.cell}\n\n:::\n\n##  Quarto Header dynamically generated with foo_md()\n\n\nLorem ipsum dolor sit amet, in at in sed nibh. Neque dignissim ad\nimperdiet urna urna. In id erat aliquam, dolor ut odio. Congue at, \nnon justo fermentum urna suscipit ad torquent posuere. \n\n\n## Ordinary markdown header\n\nVehicula viverra sed volutpat metus placerat tellus non. Et nisl. Et duis vel in",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

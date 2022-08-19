@@ -1,0 +1,53 @@
+project:
+  type: website
+
+website:
+  title: "Anatoly Tsyplenkov"
+  description: "Personal website of Anatoly Tsyplenkov"
+  site-url: https://atsyplenkov.ru
+  repo-url: https://github.com/atsyplenkov/quarto-blog
+  open-graph: true
+  favicon: favicon.svg
+  twitter-card: 
+    creator: "@atsyplen"
+    site: "@atsyplen"
+    card-style: "summary_large_image"
+  cookie-consent:
+    type: express
+    style: standalone
+    palette: light
+  navbar:
+    background: dark
+    foreground: light
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+      - href: papers.qmd
+      - href: software.qmd
+    right:
+      - icon: github
+        href: https://github.com/atsyplenkov
+      - icon: twitter
+        href: https://twitter.com/atsyplen
+      - text: "{{< ai google-scholar size=xl >}}"
+        href: https://scholar.google.com/citations?user=IcwW-WAAAAAJ&hl=en
+      - text: "{{< ai researchgate size=xl >}}"
+        href: https://www.researchgate.net/profile/Anatolii_Tsyplenkov
+format:
+  html:
+    theme: 
+      light: [cosmo, theme.scss]
+    css: styles.css
+    toc: true
+    toc-depth: 4
+    toc-title: "Contents"
+    html-math-method: katex
+    include-in-header:
+      - includes.html
+    highlight-style: tango
+
+execute:
+  freeze: auto
+
+

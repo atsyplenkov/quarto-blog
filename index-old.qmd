@@ -1,0 +1,30 @@
+---
+page-layout: full
+header-includes: |
+  <link href="index-styles.css" rel="stylesheet">
+---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 id='bio-pic'}
+<br>
+<br>
+![](headshot.webp)
+:::
+
+::: {.g-col-12 .g-col-md-6 id='about-me-text'}
+# Hi, I'm Anatoly Tsyplenkov.
+
+I did my Ph.D. at the Lomonosov Moscow State University, where I was interested in the spatio-temporal variability of sediment transport in mountain areas, and a postdoc at the Institute of Geography Russian Academy of Science, where I focused on remote sensing and geomorphology in the Caucasus. While a hydrologist and fluvial geomorphologist at the core, I am fascinated by creative ways to visualize the data (what dataviz designers do), and by transformative technologies to extract and disseminate knowledge from data (what computer scientists do). My passion as a researcher is to integrate insights from these fields in a useful way to promote equitable and sustainable global access to safe water and energy.
+
+<p align="center">
+[{{< fa brands github size=2x >}}](https://github.com/atsyplenkov)
+[{{< fa brands twitter size=2x >}}](https://twitter.com/atsyplen)
+[{{< ai google-scholar size=2x >}}](https://scholar.google.com/citations?user=IcwW-WAAAAAJ&hl=en)
+[{{< ai researchgate size=2x >}}](https://www.researchgate.net/profile/Anatolii_Tsyplenkov)
+[{{< ai orcid size=2x >}}](https://orcid.org/0000-0003-4144-8402)
+[{{< fa solid envelope size=2x >}}](mailto:atsyplenkov@gmail.com)
+</p>
+
+:::
+:::

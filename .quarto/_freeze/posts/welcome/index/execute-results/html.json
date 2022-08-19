@@ -1,0 +1,14 @@
+{
+  "hash": "98552c15d56903b9c173a2ee092c86e0",
+  "result": {
+    "markdown": "---\ntitle: \"Welcome To My Blog\"\nauthor: \"Anatoly Tsyplenkov\"\ndate: \"2022-08-19\"\ncategories: [news]\n---\n\n\nThis is the first post in a Quarto blog. Welcome!\n\n![](thumbnail.jpg)\n\nSince this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

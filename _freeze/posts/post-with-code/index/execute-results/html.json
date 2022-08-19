@@ -1,0 +1,14 @@
+{
+  "hash": "6a0b49b92e77e50399f5fdbdfaa62f64",
+  "result": {
+    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Harlow Malloc\"\ndate: \"2022-08-17\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\n\nThis is a post with executable code.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nshiny::markdown(\"\n    ### Markdown Example\n\n    This is a markdown paragraph, and will be contained within a `<p>` tag\n    in the UI.\n    \n    \n    ### List\n    The following is an unordered list, which will be represented in the UI as\n    a `<ul>` with `<li>` children:\n\n    * a bullet\n    * another\n\n    [Links](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) work;\n    so does *emphasis*.\n\n    To see more of what's possible, check out [commonmark.org/help](https://commonmark.org/help).\n    \")\n```\n\n::: {.cell-output-display}\n```{=html}\n<h3>Markdown Example</h3>\n<p>This is a markdown paragraph, and will be contained within a <code>&lt;p&gt;</code> tag\nin the UI.</p>\n<h3>List</h3>\n<p>The following is an unordered list, which will be represented in the UI as\na <code>&lt;ul&gt;</code> with <code>&lt;li&gt;</code> children:</p>\n<ul>\n<li>a bullet</li>\n<li>another</li>\n</ul>\n<p><a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a\">Links</a> work;\nso does <em>emphasis</em>.</p>\n<p>To see more of what's possible, check out <a href=\"https://commonmark.org/help\">commonmark.org/help</a>.</p>\n\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

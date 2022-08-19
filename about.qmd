@@ -1,0 +1,88 @@
+---
+title: "About"
+---
+
+I am currently the Junior Research Fellow at the Faculty of Geography at the Lomonosov Moscow State University. Below is my brief bio, while a full {{< ai cv size=lg >}} can be downloaded [here {{< fa solid file-pdf size=lg >}}](data/Tsyplenkov-Anatoly_CV.pdf).
+
+### Research Interests
+
+-   Mountain fluvial geomorphology
+-   Sediment budget and dynamics
+-   Soil erosion modeling
+-   Statistical analyses on heterogeneous datasets and quantifying uncertainties based on Monte Carlo simulation techniques
+-   Designing and maintaining large databases of measurements on various geomorphic processes
+-   Quantifying and understanding geomorphic processes at catchment and regional scale
+
+### Education
+
+::: {.d-flex .justify-content-between}
+::: {}
+**Lomonosov Moscow State University**  
+PhD in Geographic Sciences (Hydrology)  
+Advisors: Valentin Golosov, Sergey Chalov
+:::
+::: {.text-end}
+Moscow, Russia  
+Granted Dec 2019
+:::
+:::
+- Dissertation: *Suspended sediment load formation in small mountain river basins: general patterns and regional features*
+
+::: {.d-flex .justify-content-between}
+::: {}
+**Lomonosov Moscow State University**  
+Specialist in Hydrology (MSc equivalent)
+:::
+::: {.text-end}
+Moscow, Russia  
+Granted June 2015
+:::
+:::
+
+### Experience
+
+::: {.d-flex .justify-content-between}
+::: {}
+**Institute of Geography Russian Academy of Science**  
+:::
+::: {.text-end}
+April 2020 - present
+:::
+:::
+*Postdoctoral Researcher*
+
+- Working for the RSF grant No. 19‑17‑00181 “Quantitative assessment of the slope sediment flux and its changes in the Holocene for the Caucasus mountain rivers”
+- Sediment source fingerprinting analysis in small mountain basins
+- Suspended sediment modelling on a regional scale (Caucasus)
+- Studying short‑term and long water discharge and suspended sediment dynamics
+- Developed an `R` package for exploring intra‑event suspended sediment dynamics [`loadflux`](https://github.com/atsyplenkov/loadflux)
+
+::: {.d-flex .justify-content-between}
+::: {}
+**Lomonosov Moscow State University**  
+:::
+::: {.text-end}
+Jan 2020 - present
+:::
+:::
+*Junior Research Fellow*
+
+- Organized two international conferences and two schools for young researchers
+- Estimated soil erosion for the Eastern Russia (Siberia, Kamcharka, Chukotka)
+- Developed algorithm to process short‑term logger data (turbidity and water level)
+- Developed framework for assessing lateral erosion rates (and volumes) for Arctic rivers
+
+::: {.d-flex .justify-content-between}
+::: {}
+**State Institute of Oceanography (Russia, Moscow)**  
+:::
+::: {.text-end}
+Aug 2015 - Aug 2017
+:::
+:::
+*Technician*
+
+- Conducting hydrological measurements: water discharge, water stage, river velocity, river and lake bathymetry
+- Equipment service: ADCPs, sonars, current meters
+- Statistical analysis of main hydrological parameters (AEP, max and min discharges, etc.)
+- Flood risk mapping for the Moscow city
