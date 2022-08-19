@@ -28,6 +28,13 @@
     "text": "I did my Ph.D. at the Lomonosov Moscow State University, where I was interested in the spatio-temporal variability of sediment transport in mountain areas, and a postdoc at the Institute of Geography Russian Academy of Science, where I focused on remote sensing and geomorphology in the Caucasus. While a hydrologist and fluvial geomorphologist at the core, I am fascinated by creative ways to visualize the data (what dataviz designers do), and by transformative technologies to extract and disseminate knowledge from data (what computer scientists do). My passion as a researcher is to integrate insights from these fields in a useful way to promote equitable and sustainable global access to safe water and energy."
   },
   {
+    "objectID": "index.html#my-notes",
+    "href": "index.html#my-notes",
+    "title": "Anatoly Tsyplenkov",
+    "section": "My notes",
+    "text": "My notes"
+  },
+  {
     "objectID": "papers.html",
     "href": "papers.html",
     "title": "Papers",
@@ -54,19 +61,5 @@
     "title": "Software",
     "section": "",
     "text": "The goal of HBVr is to ease the accessebility of HBV Global Parameter maps created by Beck et al. (2020). Therefore this one-function package allows to download any of the cross-validation folds for your particular area of interest (AOI).\n\n        \n        Website\n     \n        \n        Github\n    \nrusleR\n This package offers an R implementation of the Universal Soil Loss Equation (USLE). You can find here a collection of functions to estimate main factors: R-factor, K-factor, LS-factor and C-factor. The package uses terra and Rsagacmd in the backend.\n\n        \n        Website\n     \n        \n        Github\n    \nloadflux\n The loadflux package is build for the comprehensive analysis of the intra-event suspended sediment dynamics. This is a collection of functions created to study water discharge (Q) and suspended sediment concentration (SSC) relationship.\n\n        \n        Website\n     \n        \n        Github\n     \n        \n        Package\n    \ntgme\n This is a very simple package with only one function tgme. The aim of this package is to send you a message when a job on Rstudio server is done (or on your local machine).\nIt is a free alternative to the Rich Pauloo’s textme package.\n\n        \n        Github"
-  },
-  {
-    "objectID": "index.html#posts",
-    "href": "index.html#posts",
-    "title": "Anatoly Tsyplenkov",
-    "section": "Posts",
-    "text": "Posts"
-  },
-  {
-    "objectID": "index.html#my-notes",
-    "href": "index.html#my-notes",
-    "title": "Anatoly Tsyplenkov",
-    "section": "My notes",
-    "text": "My notes"
   }
 ]

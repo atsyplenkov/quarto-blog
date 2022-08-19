@@ -10,6 +10,7 @@ listing:
 page-layout: full
 title-block-banner: false
 toc: false
+comments: false
 ---
 
 ### Hi, my name is Anatoly!
