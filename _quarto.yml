@@ -10,9 +10,6 @@ website:
   favicon: favicon.svg
   twitter-card: 
     creator: "@atsyplen"
-    site: "@atsyplen"
-    image: social-media-logo.webp
-    description: "Technical notes about R, sediments and maps"
     card-style: "summary_large_image"
   cookie-consent:
     type: express
@@ -47,8 +44,7 @@ format:
     toc-depth: 4
     toc-title: "Contents"
     html-math-method: katex
-    include-in-header:
-      - includes.html
+    include-in-header: includes.html
     highlight-style: github
 
 execute:
