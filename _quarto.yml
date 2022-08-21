@@ -20,6 +20,7 @@ website:
       - href: about.qmd
       - href: papers.qmd
       - href: software.qmd
+      - href: app.qmd
     right:
       - icon: github
         href: https://github.com/atsyplenkov
@@ -34,10 +35,8 @@ website:
   page-footer:
     left: "Anatoly Tsyplenkov, 2022. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)"
     right:
-      - icon: github
-        href: https://github.com/atsyplenkov/
-      - icon: twitter
-        href: https://twitter.com/atsyplen
+      - icon: rss
+        href: index.xml
       - icon: envelope
         href: mailto:atsyplenkov@gmail.com
     

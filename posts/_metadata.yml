@@ -6,3 +6,13 @@ freeze: true
 
 # Enable banner style title blocks
 title-block-banner: false
+
+# Default author
+author:
+  - name: Anatoly Tsyplenkov
+    url: https://atsyplenkov.ru
+    affiliation: Lomonosov Moscow State University
+    orcid: 0000-0003-4144-8402
+
+# Default fields for citation
+citation: true

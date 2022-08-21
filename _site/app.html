@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Anatoly Tsyplenkov - Software</title>
+<title>Anatoly Tsyplenkov - Apps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,7 +66,7 @@ ul.task-list{list-style: none;}
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://atsyplenkov.ru/">
-<meta property="og:title" content="Anatoly Tsyplenkov - Software">
+<meta property="og:title" content="Anatoly Tsyplenkov - Apps">
 <meta property="og:description" content="Technical notes about R, sediments and maps.">
 <meta property="og:image" content="https://atsyplenkov.ru/social-media-logo.webp">
 
@@ -82,11 +82,11 @@ ul.task-list{list-style: none;}
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Anatoly Tsyplenkov - Software">
-<meta property="og:description" content="The goal of HBVr is to ease the accessebility of HBV Global Parameter maps created by Beck et al.&nbsp;(2020).">
+<meta property="og:title" content="Anatoly Tsyplenkov - Apps">
+<meta property="og:description" content="Below is a list of a Shiny web apps developed and curated by me. Most of them are running on my own shiny server — atsyplenkov.pp.ru.">
 <meta property="og:site-name" content="Anatoly Tsyplenkov">
-<meta name="twitter:title" content="Anatoly Tsyplenkov - Software">
-<meta name="twitter:description" content="The goal of HBVr is to ease the accessebility of HBV Global Parameter maps created by Beck et al.&nbsp;(2020).">
+<meta name="twitter:title" content="Anatoly Tsyplenkov - Apps">
+<meta name="twitter:description" content="Below is a list of a Shiny web apps developed and curated by me. Most of them are running on my own shiny server — atsyplenkov.pp.ru.">
 <meta name="twitter:creator" content="@atsyplen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -115,10 +115,10 @@ ul.task-list{list-style: none;}
     <a class="nav-link" href="./papers.html">Papers</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./software.html" aria-current="page">Software</a>
+    <a class="nav-link" href="./software.html">Software</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./app.html">Apps</a>
+    <a class="nav-link active" href="./app.html" aria-current="page">Apps</a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -156,10 +156,8 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#HBVr" id="toc-HBVr" class="nav-link active" data-scroll-target="#HBVr"><code>HBVr</code></a></li>
-  <li><a href="#rusleR" id="toc-rusleR" class="nav-link" data-scroll-target="#rusleR"><code>rusleR</code></a></li>
-  <li><a href="#loadflux" id="toc-loadflux" class="nav-link" data-scroll-target="#loadflux"><code>loadflux</code></a></li>
-  <li><a href="#tgme" id="toc-tgme" class="nav-link" data-scroll-target="#tgme"><code>tgme</code></a></li>
+  <li><a href="#Zepter" id="toc-Zepter" class="nav-link active" data-scroll-target="#Zepter">Zepter</a></li>
+  <li><a href="#Rewriter" id="toc-Rewriter" class="nav-link" data-scroll-target="#Rewriter">Rewriter</a></li>
   </ul>
 </nav>
     </div>
@@ -168,7 +166,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Software</h1>
+<h1 class="title">Apps</h1>
 </div>
 
 
@@ -182,40 +180,23 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<h2 id="HBVr" class="anchored"><code>HBVr</code></h2>
-<p><img align="right" height="100" src="https://raw.githubusercontent.com/atsyplenkov/HBVr/master/man/figures/logo.webp"> The goal of <code>HBVr</code> is to ease the accessebility of <a href="http://www.gloh2o.org/hbv/">HBV Global Parameter maps</a> created by Beck et al.&nbsp;(<a href="https://doi.org/10.1029/2019JD031485">2020</a>). Therefore this one-function package allows to download any of the cross-validation folds for your particular area of interest (AOI).</p>
-<a class="btn btn-outline-dark btn-sm" ,="" href="https://atsyplenkov.github.io/HBVr/" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-info" role="img" aria-label="Website"></i>
-        Website
-    </a> <a class="btn btn-outline-dark btn-sm" ,="" href="https://github.com/atsyplenkov/HBVr" target="_blank" rel="noopener noreferrer">
+<p>Below is a list of a <a href="https://shiny.rstudio.com/"><code>Shiny</code></a> web apps developed and curated by me. Most of them are running on my own shiny server — <code>atsyplenkov.pp.ru</code>.</p>
+<h2 id="Zepter" class="anchored">Zepter</h2>
+<p><img align="right" height="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8MPQgNzA4QxVaoj627VtB9TC-SaIdrUIGm9Tw3RuoSWl_1k0cCpUgsPJBXtxKGCdMAsg&amp;usqp=CAU"> The <code>Zepter</code> app can ease the currency conversion within the <a href="https://mironline.ru/support/list/kursy_mir/">MIR payment system</a>. Since many banks using their own exchange rate, the calculation of the final rate can be struggling.</p>
+<p>This app is parsing <code>CBR</code>, <code>MIR</code> and <code>Zepter Bank</code> websites to get the up-to-date exchange rates and summarise them in a neat table.</p>
+<a class="btn btn-outline-dark btn-sm" ,="" href="https://atsyplenkov.pp.ru/shiny/zepter" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-window" role="img" aria-label="Launch App"></i>
+        Launch App
+    </a> <a class="btn btn-outline-dark btn-sm" ,="" href="https://github.com/atsyplenkov/shiny-server/tree/master/zepter" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-github" role="img" aria-label="Github"></i>
         Github
     </a>
-<h2 id="rusleR" class="anchored"><code>rusleR</code></h2>
-<p><img align="right" height="100" src="https://raw.githubusercontent.com/atsyplenkov/rusleR/master/man/figures/logo.svg"> This package offers an <code>R</code> implementation of the Universal Soil Loss Equation (USLE). You can find here a collection of functions to estimate main factors: R-factor, K-factor, LS-factor and C-factor. The package uses <code>terra</code> and <code>Rsagacmd</code> in the backend.</p>
-<a class="btn btn-outline-dark btn-sm" ,="" href="https://atsyplenkov.github.io/rusleR/" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-info" role="img" aria-label="Website"></i>
-        Website
-    </a> <a class="btn btn-outline-dark btn-sm" ,="" href="https://github.com/atsyplenkov/rusleR" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-github" role="img" aria-label="Github"></i>
-        Github
-    </a>
-<h2 id="loadflux" class="anchored"><code>loadflux</code></h2>
-<p><img align="right" height="100" src="https://raw.githubusercontent.com/atsyplenkov/loadflux/master/man/figures/logo.svg"> The <code>loadflux</code> package is build for the comprehensive analysis of the intra-event suspended sediment dynamics. This is a collection of functions created to study water discharge (<code>Q</code>) and suspended sediment concentration (<code>SSC</code>) relationship.</p>
-<a class="btn btn-outline-dark btn-sm" ,="" href="https://atsyplenkov.github.io/loadflux/" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-info" role="img" aria-label="Website"></i>
-        Website
-    </a> <a class="btn btn-outline-dark btn-sm" ,="" href="https://github.com/atsyplenkov/loadflux" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-github" role="img" aria-label="Github"></i>
-        Github
-    </a> <a class="btn btn-outline-dark btn-sm" ,="" href="https://cran.r-project.org/package=loadflux" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-box-seam" role="img" aria-label="Package"></i>
-        Package
-    </a>
-<h2 id="tgme" class="anchored"><code>tgme</code></h2>
-<p><img align="right" height="100" src="https://raw.githubusercontent.com/atsyplenkov/tgme/master/man/figures/logo.svg"> This is a very simple package with only one function <code>tgme</code>. The aim of this package is to send you a message when a job on Rstudio server is done (or on your local machine).</p>
-<p>It is a free alternative to the <a href="https://github.com/richpauloo">Rich Pauloo’s</a> <a href="https://github.com/richpauloo/textme"><code>textme</code></a> package.</p>
-<a class="btn btn-outline-dark btn-sm" ,="" href="https://github.com/atsyplenkov/tgme" target="_blank" rel="noopener noreferrer">
+<h2 id="Rewriter" class="anchored">Rewriter</h2>
+<p><img align="right" height="100" src="https://sbercloud.ru/no-index-images/img/pages/datahub/rugpt3family/rewrite.png"> This is a very simple shiny app aimed on paraphrasing <strong>Russian</strong> texts. It is using <code>Reriter</code> by Sber model’s <a href="https://sbercloud.ru/ru/datahub/rugpt3family/demo-rewrite">API</a>. From news and fiction to social media posts, the <code>Rewriter</code> is able to rewrite any text with the same meaning, regardless of length or format.</p>
+<a class="btn btn-outline-dark btn-sm" ,="" href="https://atsyplenkov.pp.ru/shiny/sber" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-window" role="img" aria-label="Launch App"></i>
+        Launch App
+    </a> <a class="btn btn-outline-dark btn-sm" ,="" href="https://github.com/atsyplenkov/shiny-server/tree/master/sber" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-github" role="img" aria-label="Github"></i>
         Github
     </a>
@@ -327,8 +308,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml">
-      <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="https://github.com/atsyplenkov/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/atsyplen">
+      <i class="bi bi-twitter" role="img">
 </i> 
     </a>
   </li>  

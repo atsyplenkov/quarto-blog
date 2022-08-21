@@ -1,0 +1,22 @@
+- title: "Rewriter"
+  description: |
+    This is a very simple shiny app aimed on paraphrasing **Russian** texts. It is
+    using `Reriter` by Sber model's [API](https://sbercloud.ru/ru/datahub/rugpt3family/demo-rewrite). 
+    From news and fiction to social media posts, the `Rewriter` is able to rewrite any text with the same meaning, 
+    regardless of length or format.
+  
+  website: https://atsyplenkov.pp.ru/shiny/sber  
+  github: https://github.com/atsyplenkov/shiny-server/tree/master/sber
+  logo: https://sbercloud.ru/no-index-images/img/pages/datahub/rugpt3family/rewrite.png
+- title: "Zepter"
+  description: |
+    The `Zepter` app can ease the currency conversion within the [MIR payment system](https://mironline.ru/support/list/kursy_mir/).
+    Since many banks using their own exchange rate, the calculation of the final rate
+    can be struggling.
+    
+    This app is parsing `CBR`, `MIR` and `Zepter Bank` websites to get the up-to-date
+    exchange rates and summarise them in a neat table.
+  website: https://atsyplenkov.pp.ru/shiny/zepter
+  github:  https://github.com/atsyplenkov/shiny-server/tree/master/zepter
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8MPQgNzA4QxVaoj627VtB9TC-SaIdrUIGm9Tw3RuoSWl_1k0cCpUgsPJBXtxKGCdMAsg&usqp=CAU
+  

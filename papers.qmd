@@ -7,16 +7,25 @@ editor_options:
   chunk_output_type: console
 ---
 
-The following is a list of my selected peer-reviewed publications. All articles, abstracts, book chapters can be found at [Google Scholar {{< ai google-scholar size=lg >}}](https://scholar.google.com/citations?user=IcwW-WAAAAAJ&hl=en).
-
-A `.pdf` version can be downloaded [here {{< fa solid file-pdf size=lg >}}](data/Tsyplenkov-Anatoly_publications.pdf).
-
 ```{r setup, include=FALSE}
 
 library(tidyverse)
 library(bib2df) # dev version devtools::install_github("ropensci/bib2df")
+library(scholar)
+
+# Get  google scholar statistics
+profile <- scholar::get_profile("IcwW-WAAAAAJ")
+
+tsyplenkov <- scholar::get_publications("IcwW-WAAAAAJ")
 
 ```
+
+The following is a list of my selected peer-reviewed publications. All articles, abstracts, book chapters can be found at [Google Scholar {{< ai google-scholar size=lg >}}](https://scholar.google.com/citations?user=IcwW-WAAAAAJ&hl=en). Some {{< ai google-scholar size=lg >}} stats:
+
+> `r nrow(tsyplenkov)` scientific papers, ~`r profile$total_cites` citations, h-index: `r profile$h_index`
+
+A `.pdf` version can be downloaded [here {{< fa solid file-pdf size=lg >}}](data/Tsyplenkov-Anatoly_publications.pdf).
+
 
 
 ```{r}

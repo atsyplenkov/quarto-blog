@@ -1,6 +1,5 @@
 ---
 title: 'Accessing SoilGrids via {terra}'
-author: 'Anatoly Tsyplenkov'
 date: '2022-03-05'
 categories: [R, soil erosion]
 code-fold: true
