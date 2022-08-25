@@ -7,7 +7,7 @@
   
   website: https://atsyplenkov.pp.ru/shiny/sber  
   github: https://github.com/atsyplenkov/shiny-server/tree/master/sber
-  logo: https://sbercloud.ru/no-index-images/img/pages/datahub/rugpt3family/rewrite.png
+  logo: https://sbercloud.ru/logo-192.png
 - title: "Zepter"
   description: |
     The `Zepter` app can ease the currency conversion within the [MIR payment system](https://mironline.ru/support/list/kursy_mir/).
