@@ -1,5 +1,5 @@
 # Publication list 
-Author: Anatoly Tsyplenkov, Created: Aug 2022
+Author: Anatoly Tsyplenkov, Created: Nov 2022
 
 1. <li class='list-group-item'>Belyakova, P., Moreydo, V., **Tsyplenkov, A.**, Amerbaev, A., Grechishnikova, D., Kurochkina, L., Filippov, V., Makeev, M.. 2022. _Forecasting Water Levels in Krasnodar Krai Rivers with the Use of Machine Learning_. Water Resources 49: 10--22. DOI: 10.1134/S0097807822010043</li>
 2. <li class='list-group-item'>Golosov, V. N., Ivanov, M. M., **Tsyplenkov, A. S.**, Ivanov, M. A., Konoplev, A. V., Wakiyama, Yu, Konstantinov, E. A., Ivanova, N. N.. 2021. _Erosion as a Factor of Transformation of Soil Radioactive Contamination in the Basin of the Shchekino Reservoir (Tula Region)_. Eurasian Soil Science 54: 291--303. DOI: 10.1134/S106422932102006X</li>

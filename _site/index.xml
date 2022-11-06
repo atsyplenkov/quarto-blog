@@ -9,8 +9,8 @@
 <link>https://atsyplenkov.ru/index.html</link>
 <atom:link href="https://atsyplenkov.ru/index.xml" rel="self" type="application/rss+xml"/>
 <description>Personal website of Anatoly Tsyplenkov</description>
-<generator>quarto-1.0.38</generator>
-<lastBuildDate>Fri, 04 Mar 2022 21:00:00 GMT</lastBuildDate>
+<generator>quarto-1.1.251</generator>
+<lastBuildDate>Fri, 04 Mar 2022 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Accessing SoilGrids via {terra}</title>
   <dc:creator>Anatoly Tsyplenkov</dc:creator>
@@ -213,6 +213,7 @@
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{tsyplenkov2022,
   author = {Anatoly Tsyplenkov},
+  editor = {},
   title = {Accessing {SoilGrids} via \{Terra\}},
   date = {2022-03-05},
   url = {https://atsyplenkov.ru/posts/2022-03-05-soilgrids-terra/2022-03-05-soilgrids-terra.html},
@@ -225,7 +226,7 @@ Anatoly Tsyplenkov. 2022. <span>“Accessing SoilGrids via
   <category>R</category>
   <category>soil erosion</category>
   <guid>https://atsyplenkov.ru/posts/2022-03-05-soilgrids-terra/2022-03-05-soilgrids-terra.html</guid>
-  <pubDate>Fri, 04 Mar 2022 21:00:00 GMT</pubDate>
+  <pubDate>Fri, 04 Mar 2022 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Tidy Tuesday NHL</title>
@@ -426,6 +427,7 @@ font-style: italic;">## Cutting tidy_50$total_goals into tidy_50$total_goals_rec
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{tsyplenkov2020,
   author = {Anatoly Tsyplenkov},
+  editor = {},
   title = {Tidy {Tuesday} {NHL}},
   date = {2020-03-03},
   url = {https://atsyplenkov.ru/posts/2020-03-03-tidy-tuesday-nhl/2020-03-03-tidy-tuesday-nhl.html},
@@ -438,7 +440,7 @@ Anatoly Tsyplenkov. 2020. <span>“Tidy Tuesday NHL.”</span> March 3,
   <category>R</category>
   <category>tidytuesday</category>
   <guid>https://atsyplenkov.ru/posts/2020-03-03-tidy-tuesday-nhl/2020-03-03-tidy-tuesday-nhl.html</guid>
-  <pubDate>Mon, 02 Mar 2020 21:00:00 GMT</pubDate>
+  <pubDate>Mon, 02 Mar 2020 23:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -24,6 +24,8 @@ website:
     right:
       - icon: github
         href: https://github.com/atsyplenkov
+      - icon: mastodon
+        href: https://fosstodon.org/@atsyplenkov
       - icon: twitter
         href: https://twitter.com/atsyplen
       - text: "{{< fa brands telegram size=xl >}}"
