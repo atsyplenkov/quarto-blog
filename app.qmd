@@ -14,7 +14,7 @@ Below is a list of a [`Shiny`](https://shiny.rstudio.com/) web apps developed an
 #| output: asis
 
 # Modified from Drew Dimmery's website
-# Dear Drew, if you reading this, thanky you very much
+# Dear Drew, if you reading this, thank you very much
 # https://github.com/ddimmery/quarto-website/blob/main/software.qmd
 
 import yaml

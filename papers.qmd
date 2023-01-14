@@ -7,7 +7,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, warning=FALSE}
 
 library(tidyverse)
 library(bib2df) # dev version devtools::install_github("ropensci/bib2df")
@@ -32,6 +32,7 @@ A `.pdf` version can be downloaded [here {{< fa solid file-pdf size=lg >}}](data
 #| label: "papers"
 #| id: "papers"
 #| output: asis
+#| warning: false
 
 # Modified from Drew Dimmery's website
 # Dear Drew, if you reading this, thanky you very much
@@ -187,7 +188,7 @@ entries_year_row$paper %>%
 
 ```
 
-```{r, include=FALSE}
+```{r, include=FALSE, warning=FALSE}
 library(lubridate)
 library(fs)
 library(rmarkdown)

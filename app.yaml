@@ -1,7 +1,7 @@
 - title: "Rewriter"
   description: |
     This is a very simple shiny app aimed on paraphrasing **Russian** texts. It is
-    using `Reriter` by Sber model's [API](https://sbercloud.ru/ru/datahub/rugpt3family/demo-rewrite). 
+    using `Rewriter` by Sber model's [API](https://sbercloud.ru/ru/datahub/rugpt3family/demo-rewrite). 
     From news and fiction to social media posts, the `Rewriter` is able to rewrite any text with the same meaning, 
     regardless of length or format.
   
