@@ -35,7 +35,7 @@ website:
       - text: "{{< ai researchgate size=xl >}}"
         href: https://www.researchgate.net/profile/Anatolii_Tsyplenkov
   page-footer:
-    left: "2022 | License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)"
+    left: "2023 | License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)"
     right:
       - icon: rss
         href: index.xml

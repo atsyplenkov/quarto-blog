@@ -198,7 +198,7 @@ df_en <-
   df %>% 
   arrange(-YEAR) %>% 
   filter(CATEGORY == "ARTICLE") %>% 
-  filter(textcat(TITLE) == "english")
+  filter(str_to_lower(LANGID) != "russian")
 
 df_to_tex <- 
   function(.data){

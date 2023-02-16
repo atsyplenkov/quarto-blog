@@ -9,7 +9,7 @@
 <link>https://atsyplenkov.ru/index.html</link>
 <atom:link href="https://atsyplenkov.ru/index.xml" rel="self" type="application/rss+xml"/>
 <description>Personal website of Anatoly Tsyplenkov</description>
-<generator>quarto-1.1.251</generator>
+<generator>quarto-1.2.335</generator>
 <lastBuildDate>Fri, 04 Mar 2022 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Accessing SoilGrids via {terra}</title>

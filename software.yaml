@@ -1,3 +1,9 @@
+- title: "rp5pik"
+  description: |
+    The `rp5pik` package provides a set of functions to download and preprocess
+    meteorological data from [http://www.pogodaiklimat.ru/](www.pogodaiklimat.ru)
+  github: https://github.com/atsyplenkov/rp5pik
+  logo: https://raw.githubusercontent.com/atsyplenkov/rp5pik/master/man/figures/rp5pik_logo.png
 - title: "tgme"
   description: |
     This is a very simple package with only one function `tgme`. The aim of this 
