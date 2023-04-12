@@ -20,11 +20,17 @@ tsyplenkov <- scholar::get_publications("IcwW-WAAAAAJ")
 
 ```
 
-The following is a list of my selected peer-reviewed publications. All articles, abstracts, book chapters can be found at [Google Scholar {{< ai google-scholar size=lg >}}](https://scholar.google.com/citations?user=IcwW-WAAAAAJ&hl=en). Some {{< ai google-scholar size=lg >}} stats:
+The following is a list of my selected peer-reviewed publications. All articles, abstracts, book chapters can be found at [Google Scholar {{< ai google-scholar size=lg >}}](https://scholar.google.com/citations?user=IcwW-WAAAAAJ&hl=en).
 
-> `r nrow(tsyplenkov)` scientific papers, ~`r profile$total_cites` citations, h-index: `r profile$h_index`
+::: {.callout-note icon=false}
 
-A `.pdf` version can be downloaded [here {{< fa solid file-pdf size=lg >}}](data/Tsyplenkov-Anatoly_publications.pdf).
+## {{< ai google-scholar size=lg >}} stats as of `r Sys.Date()`
+
+`r nrow(tsyplenkov)` scientific papers, ~`r profile$total_cites` citations, h-index: `r profile$h_index`
+
+:::
+
+A `.pdf` list of publications can be downloaded [here {{< fa solid file-pdf size=lg >}}](data/Tsyplenkov-Anatoly_publications.pdf).
 
 
 

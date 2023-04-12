@@ -7,7 +7,13 @@ After a hydrologist license in Lomonosov Moscow State University (MSc.) and seve
 
 Following my Ph.D. defense at Lomonosov Moscow State University in December 2019, I received a Junior Research Fellow position in the Laboratory of Fluvial Processes and Soil Erosion at Faculty of Geography.
 
-Below is my brief bio, while a full {{< ai cv size=lg >}} can be downloaded [here {{< fa solid file-pdf size=lg >}}](data/Tsyplenkov-Anatoly_CV.pdf).
+Below is my brief bio, while a 
+
+::: {.callout-caution appearance="simple" icon=false }
+
+Full {{< ai cv size=lg >}} can be downloaded [here {{< fa solid file-pdf size=lg >}}](data/Tsyplenkov-Anatoly_CV.pdf).
+
+:::
 
 ### Research Interests
 

@@ -1,5 +1,5 @@
 # Publication list 
-Author: Anatoly Tsyplenkov, Created: Feb 2023
+Author: Anatoly Tsyplenkov, Created: Apr 2023
 
 1. <li class='list-group-item'>Belyakova, P., Moreydo, V., **Tsyplenkov, A.**, Amerbaev, A., Grechishnikova, D., Kurochkina, L., Filippov, V., Makeev, M.. 2022. _Forecasting Water Levels in Krasnodar Krai Rivers with the Use of Machine Learning_. Water Resources 49: 10--22. DOI: 10.1134/S0097807822010043</li>
 2. <li class='list-group-item'>Chalov, S. R., **Tsyplenkov, A. S.**, Shkolnyi, D. I., Prokopeva, K. N., Bahareva, E. I.. 2022. _Overland Runoff and Its Impact on Hydrobiont Mortality in Avachinsky Gulf (Pacific Ocean, Kamchatka)_. Proceedings of the Russian Geographical Society 4: 1--14. DOI: 10.31857/S0869607122040048</li>
@@ -19,5 +19,5 @@ Author: Anatoly Tsyplenkov, Created: Feb 2023
 16. <li class='list-group-item'>**Tsyplenkov, Anatoly**, Vanmaercke, Matthias, Golosov, Valentin. 2019. _Contemporary Suspended Sediment Yield of Caucasus Mountains_. Proceedings of the International Association of Hydrological Sciences 381: 87--93. DOI: 10.5194/piahs-381-87-2019</li>
 17. <li class='list-group-item'>Chalov, S. R., **Tsyplenkov, A. S.**. 2017. _Sediment Discharge of Small Rivers in Areas of Active Volcanism (River Sukhaya Elizovskaya, Kamchatka)_. Geomorphology RAS NA: 104--116. DOI: 10.15356/0435-4281-2017-1-104-116</li>
 18. <li class='list-group-item'>Chalov, Sergey R., **Tsyplenkov, Anatolii S.**, Pietron, Jan, Chalova, Aleksandra S., Shkolnyi, Danila I., Jarsjö, Jerker, Maerker, Michael. 2017. _Sediment Transport in Headwaters of a Volcanic Catchment—Kamchatka Peninsula Case Study_. Frontiers of Earth Science 11: 565--578. DOI: 10.1007/s11707-016-0632-x</li>
-19. <li class='list-group-item'>Chalov, S., Golosov, V., **Tsyplenkov, A.**, Theuring, Ph., Zakerinejad, R., Märker, M., Samokhin, M.. 2017. _A Toolbox for Sediment Budget Research in Small Catchments_. GEOGRAPHY, ENVIRONMENT, SUSTAINABILITY 10: 43--68. DOI: 10.24057/2071-9388-2017-10-4-43-68</li>
+19. <li class='list-group-item'>Chalov, S., Golosov, V., **Tsyplenkov, A.**, Theuring, {\relax Ph}., Zakerinejad, R., Märker, M., Samokhin, M.. 2017. _A Toolbox for Sediment Budget Research in Small Catchments_. GEOGRAPHY, ENVIRONMENT, SUSTAINABILITY 10: 43--68. DOI: 10.24057/2071-9388-2017-10-4-43-68</li>
 20. <li class='list-group-item'>**Tsyplenkov, A. S.**, Golosov, V. N., Kuksina, L. V.. 2017. _Assessment of Basin Component of Suspended Sediment Yield Generated Due to Rainfall Events at Small Rivers in Wet and Dry Subtropics_. Engineering survey NA: 54--65. DOI: 10.25296/1997-8650-2017-9-54-65</li>

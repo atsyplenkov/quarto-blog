@@ -28,30 +28,32 @@ website:
         href: https://fosstodon.org/@atsyplenkov
       - icon: twitter
         href: https://twitter.com/atsyplen
-      - text: "{{< fa brands telegram size=xl >}}"
-        href: https://t.me/hydroNSR
       - text: "{{< ai google-scholar size=xl >}}"
         href: https://scholar.google.com/citations?user=IcwW-WAAAAAJ&hl=en
       - text: "{{< ai researchgate size=xl >}}"
         href: https://www.researchgate.net/profile/Anatolii_Tsyplenkov
   page-footer:
-    left: "2023 | License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)"
-    right:
-      - icon: rss
-        href: index.xml
-      - icon: envelope
-        href: mailto:atsyplenkov@gmail.com
-    
+    left: |
+      <span class="faux-block">{{< fa brands creative-commons >}} {{< var years >}} Anatoly Tsyplenkov</span>
+      <span class="faux-block">All content licensed under<br>[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-sa >}} Creative Commons CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</span>
+    center: |
+      <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
+      <span class="faux-block">[View the source at {{< fa brands github >}} GitHub]({{< var github-url >}})</span>
+    right: |
+      <span class="faux-block"> [{{< fa solid rss >}}](/index.xml)</span>
+      <span class="faux-block"> [{{< fa solid envelope >}}](mailto:atsyplenkov@gmail.com)</span>
 
 format:
   html:
     theme: 
-      light: [cosmo, theme.scss]
-    css: styles.css
+      - ath.scss
     toc: true
     toc-depth: 4
     html-math-method: katex
     include-in-header: meta.html
+    footnotes-hover: true
+    fig-cap-location: margin
+    reference-location: margin
     highlight-style: github
 
 execute:
