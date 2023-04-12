@@ -6,5 +6,10 @@ This repo contains my personal website createed using [Quarto][quarto] and deplo
 - [**Creating a blog with Quarto in 10 steps**](https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/) by Bea Milz
 - [**Quarto for an Academic Website**](https://ddimmery.com/posts/quarto-website/) by Drew Dimmery
 
+Extremely appreciate Andrew Heiss for publishing source code of his blog [https://www.andrewheiss.com/](https://www.andrewheiss.com/)
+
+
+
+
 
 [quarto]: https://quarto.org/

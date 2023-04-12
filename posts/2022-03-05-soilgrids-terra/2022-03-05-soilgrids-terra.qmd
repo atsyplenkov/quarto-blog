@@ -2,7 +2,8 @@
 title: 'Accessing SoilGrids via {terra}'
 date: '2022-03-05'
 categories: [R, soil erosion]
-code-fold: true
+code-fold: show
+code-summary: "Show the code"
 ---
 
 ```{r setup, include=FALSE}

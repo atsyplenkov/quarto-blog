@@ -253,16 +253,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <a href="https://atsyplenkov.ru">Anatoly Tsyplenkov</a> <a href="https://orcid.org/0000-0003-4144-8402" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Lomonosov Moscow State University
+          </p>
+      </div>
+    </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Anatoly Tsyplenkov </p>
-          </div>
-  </div>
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
@@ -285,22 +292,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 class="anchored" data-anchor-id="boundary-layer">1. Boundary layer</h3>
 <p>First of all, let’s load some boundary layer, i.e., our area of interest (AOI). I will use the default <code>sf</code> sample data for North Carolina counties. To reduce the size of AOI, let me select only the first county. The SoilGrids files are stored in Interrupted Goode Homolosine, so I have to reproject our AOI polygon to it.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load sample data</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>nc <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">system.file</span>(<span class="st">"shape/nc.shp"</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">package =</span> <span class="st">"sf"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>),</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">quiet =</span> T</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Transform to IGH projection</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>igh <span class="ot">&lt;-</span> <span class="st">"+proj=igh +lat_0=0 +lon_0=0 +datum=WGS84 +units=m +no_defs"</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>nc_igh <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(nc, igh)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>nc <span class="ot">&lt;-</span> <span class="fu">st_read</span>(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">system.file</span>(<span class="st">"shape/nc.shp"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">package =</span> <span class="st">"sf"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">quiet =</span> T</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Transform to IGH projection</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>igh <span class="ot">&lt;-</span> <span class="st">"+proj=igh +lat_0=0 +lon_0=0 +datum=WGS84 +units=m +no_defs"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>nc_igh <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(nc, igh)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -308,8 +316,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 class="anchored" data-anchor-id="download-urls">2. Download urls</h3>
 <p>Now Let’s just copy download urls from previous <a href="https://rpubs.com/ials2un/soilgrids_webdav">tutorials</a>. And create a link to every other separate <code>.vrt</code> file, since we are gonna <code>purrr::map</code> them later. I’m interested only in mean topsoil characteristics (i.e.&nbsp;0-30 cm) right now. So I will download sand, silt, and clay content and soil organic carbon content (soc).</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sg_url <span class="ot">&lt;-</span> <span class="st">"/vsicurl/https://files.isric.org/soilgrids/latest/data/"</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>props <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"sand"</span>, <span class="st">"silt"</span>, <span class="st">"clay"</span>, <span class="st">"soc"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>layers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"0-5"</span>, <span class="st">"5-15"</span>, <span class="st">"15-30"</span>)</span>
@@ -329,8 +337,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Then, we need to create a list of paths to save. Let’s create a directory <code>soilgrid</code> where we are going to download our layers.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the directory exists</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">"soilgrid"</span>)) {</span>
@@ -357,8 +365,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 class="anchored" data-anchor-id="download-and-preprocess-function">3. Download and preprocess function</h3>
 <p>My general idea is to crop the SoilGrid layer to the bounding box, reproject to my CRS (i.e.&nbsp;CRS of the <code>nc</code> layer), download, and then write as <code>.tif</code>. However, I want to do this for 12 rasters. Therefore, we need to write a function we are going to apply:</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to download and transform soilgrid layers</span></span>
@@ -378,8 +386,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Before running it in the loop, let’s try it for the first layer.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">soilgrids_download</span>(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">list_vrt =</span> vrt[<span class="dv">1</span>],</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">list_lfile =</span> lfile[<span class="dv">1</span>],</span>
@@ -400,8 +408,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 class="anchored" data-anchor-id="map-download">4. Map download</h3>
 <p>Next, with the help of <code>purrr</code> we can apply this function to all our links. Let’s measure elapsed time.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tictoc)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -417,13 +425,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>79.04 sec elapsed</code></pre>
+<pre><code>76 sec elapsed</code></pre>
 </div>
 </div>
 <p>Well, almost 2 mins. It is necessary to improve the timing somehow. This process can be run in parallel with <code>furrr</code>.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(furrr)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set Parallel</span></span>
@@ -444,18 +452,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>42.04 sec elapsed</code></pre>
+<pre><code>44.31 sec elapsed</code></pre>
 </div>
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exit parallel</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(sequential)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Less than 1 minute. As <a href="https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw">Josh Starmer</a> says, “BAM!”. Three times faster!</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="st">"soilgrid"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">

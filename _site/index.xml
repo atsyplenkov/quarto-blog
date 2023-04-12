@@ -28,22 +28,23 @@
 <h3 class="anchored" data-anchor-id="boundary-layer">1. Boundary layer</h3>
 <p>First of all, let’s load some boundary layer, i.e., our area of interest (AOI). I will use the default <code>sf</code> sample data for North Carolina counties. To reduce the size of AOI, let me select only the first county. The SoilGrids files are stored in Interrupted Goode Homolosine, so I have to reproject our AOI polygon to it.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">library</span>(dplyr)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;">library</span>(sf)</span>
 <span id="cb1-3"></span>
 <span id="cb1-4"><span class="co" style="color: #5E5E5E;"># Load sample data</span></span>
-<span id="cb1-5">nc <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">st_read</span>(<span class="fu" style="color: #4758AB;">system.file</span>(<span class="st" style="color: #20794D;">"shape/nc.shp"</span>,</span>
-<span id="cb1-6">  <span class="at" style="color: #657422;">package =</span> <span class="st" style="color: #20794D;">"sf"</span></span>
-<span id="cb1-7">),</span>
-<span id="cb1-8"><span class="at" style="color: #657422;">quiet =</span> T</span>
-<span id="cb1-9">) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb1-10">  <span class="fu" style="color: #4758AB;">slice</span>(<span class="dv" style="color: #AD0000;">1</span>)</span>
-<span id="cb1-11"></span>
-<span id="cb1-12"><span class="co" style="color: #5E5E5E;"># Transform to IGH projection</span></span>
-<span id="cb1-13">igh <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="st" style="color: #20794D;">"+proj=igh +lat_0=0 +lon_0=0 +datum=WGS84 +units=m +no_defs"</span></span>
-<span id="cb1-14">nc_igh <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">st_transform</span>(nc, igh)</span></code></pre></div>
+<span id="cb1-5">nc <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">st_read</span>(</span>
+<span id="cb1-6">  <span class="fu" style="color: #4758AB;">system.file</span>(<span class="st" style="color: #20794D;">"shape/nc.shp"</span>,</span>
+<span id="cb1-7">    <span class="at" style="color: #657422;">package =</span> <span class="st" style="color: #20794D;">"sf"</span></span>
+<span id="cb1-8">  ),</span>
+<span id="cb1-9">  <span class="at" style="color: #657422;">quiet =</span> T</span>
+<span id="cb1-10">) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb1-11">  <span class="fu" style="color: #4758AB;">slice</span>(<span class="dv" style="color: #AD0000;">1</span>)</span>
+<span id="cb1-12"></span>
+<span id="cb1-13"><span class="co" style="color: #5E5E5E;"># Transform to IGH projection</span></span>
+<span id="cb1-14">igh <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="st" style="color: #20794D;">"+proj=igh +lat_0=0 +lon_0=0 +datum=WGS84 +units=m +no_defs"</span></span>
+<span id="cb1-15">nc_igh <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">st_transform</span>(nc, igh)</span></code></pre></div>
 </details>
 </div>
 </section>
@@ -51,8 +52,8 @@
 <h3 class="anchored" data-anchor-id="download-urls">2. Download urls</h3>
 <p>Now Let’s just copy download urls from previous <a href="https://rpubs.com/ials2un/soilgrids_webdav">tutorials</a>. And create a link to every other separate <code>.vrt</code> file, since we are gonna <code>purrr::map</code> them later. I’m interested only in mean topsoil characteristics (i.e.&nbsp;0-30 cm) right now. So I will download sand, silt, and clay content and soil organic carbon content (soc).</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">sg_url <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="st" style="color: #20794D;">"/vsicurl/https://files.isric.org/soilgrids/latest/data/"</span></span>
 <span id="cb2-2">props <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"sand"</span>, <span class="st" style="color: #20794D;">"silt"</span>, <span class="st" style="color: #20794D;">"clay"</span>, <span class="st" style="color: #20794D;">"soc"</span>)</span>
 <span id="cb2-3">layers <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"0-5"</span>, <span class="st" style="color: #20794D;">"5-15"</span>, <span class="st" style="color: #20794D;">"15-30"</span>)</span>
@@ -72,8 +73,8 @@
 </div>
 <p>Then, we need to create a list of paths to save. Let’s create a directory <code>soilgrid</code> where we are going to download our layers.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;"># Optional</span></span>
 <span id="cb4-2"><span class="co" style="color: #5E5E5E;"># Check if the directory exists</span></span>
 <span id="cb4-3"><span class="cf" style="color: #003B4F;">if</span> (<span class="sc" style="color: #5E5E5E;">!</span><span class="fu" style="color: #4758AB;">dir.exists</span>(<span class="st" style="color: #20794D;">"soilgrid"</span>)) {</span>
@@ -100,8 +101,8 @@
 <h3 class="anchored" data-anchor-id="download-and-preprocess-function">3. Download and preprocess function</h3>
 <p>My general idea is to crop the SoilGrid layer to the bounding box, reproject to my CRS (i.e.&nbsp;CRS of the <code>nc</code> layer), download, and then write as <code>.tif</code>. However, I want to do this for 12 rasters. Therefore, we need to write a function we are going to apply:</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;">library</span>(terra)</span>
 <span id="cb6-2"></span>
 <span id="cb6-3"><span class="co" style="color: #5E5E5E;"># Function to download and transform soilgrid layers</span></span>
@@ -121,8 +122,8 @@
 </div>
 <p>Before running it in the loop, let’s try it for the first layer.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;">soilgrids_download</span>(</span>
 <span id="cb7-2">  <span class="at" style="color: #657422;">list_vrt =</span> vrt[<span class="dv" style="color: #AD0000;">1</span>],</span>
 <span id="cb7-3">  <span class="at" style="color: #657422;">list_lfile =</span> lfile[<span class="dv" style="color: #AD0000;">1</span>],</span>
@@ -143,8 +144,8 @@
 <h3 class="anchored" data-anchor-id="map-download">4. Map download</h3>
 <p>Next, with the help of <code>purrr</code> we can apply this function to all our links. Let’s measure elapsed time.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;">library</span>(purrr)</span>
 <span id="cb8-2"><span class="fu" style="color: #4758AB;">library</span>(tictoc)</span>
 <span id="cb8-3"></span>
@@ -160,13 +161,13 @@
 <span id="cb8-13"><span class="fu" style="color: #4758AB;">toc</span>()</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>79.04 sec elapsed</code></pre>
+<pre><code>76 sec elapsed</code></pre>
 </div>
 </div>
 <p>Well, almost 2 mins. It is necessary to improve the timing somehow. This process can be run in parallel with <code>furrr</code>.</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="fu" style="color: #4758AB;">library</span>(furrr)</span>
 <span id="cb10-2"></span>
 <span id="cb10-3"><span class="co" style="color: #5E5E5E;"># Set Parallel</span></span>
@@ -187,18 +188,18 @@
 <span id="cb10-18"><span class="fu" style="color: #4758AB;">toc</span>()</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>42.04 sec elapsed</code></pre>
+<pre><code>44.31 sec elapsed</code></pre>
 </div>
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="co" style="color: #5E5E5E;"># Exit parallel</span></span>
 <span id="cb12-2"><span class="fu" style="color: #4758AB;">plan</span>(sequential)</span></code></pre></div>
 </details>
 </div>
 <p>Less than 1 minute. As <a href="https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw">Josh Starmer</a> says, “BAM!”. Three times faster!</p>
 <div class="cell">
-<details>
-<summary>Code</summary>
+<details open="">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;">list.files</span>(<span class="st" style="color: #20794D;">"soilgrid"</span>)</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">

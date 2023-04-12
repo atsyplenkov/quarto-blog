@@ -1,5 +1,8 @@
 project:
   type: website
+  
+resources:
+  - "data/**"
 
 website:
   title: "Anatoly Tsyplenkov"
@@ -15,12 +18,12 @@ website:
     background: dark
     foreground: light
     left:
-      - href: index.qmd
+      - href: "index.qmd"
         text: Home
-      - href: about.qmd
-      - href: papers.qmd
-      - href: software.qmd
-      - href: app.qmd
+      - href: "about.qmd"
+      - href: "papers.qmd"
+      - href: "software.qmd"
+      - href: "app.qmd"
     right:
       - icon: github
         href: https://github.com/atsyplenkov
@@ -54,7 +57,7 @@ format:
     footnotes-hover: true
     fig-cap-location: margin
     reference-location: margin
-    highlight-style: github
+    highlight-style: haddock
 
 execute:
   freeze: auto
