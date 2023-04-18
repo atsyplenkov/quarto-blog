@@ -6,6 +6,9 @@
 
 $theme: "ath" !default;
 
+// Import web Fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&IBM+Plex+Sans&Fira+Code&display=swap');
+
 //
 // Color system
 //
@@ -95,10 +98,6 @@ $footer-fg: $gray-300 !default;
 /*-- scss:rules --*/
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Noto+Sans&IBM+Plex+Sans&Fira+Code&display=swap" !default;
-
-@if $web-font-path {
-    @import url($web-font-path);
-}
 
 body {
     -webkit-font-smoothing: antialiased;
