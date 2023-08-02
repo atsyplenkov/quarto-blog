@@ -53,14 +53,15 @@ $dark:      $black !default;
 
 $font-family-sans-serif: "Noto Sans" !default;
 
-$font-family-monospace: "Fira Code" !default;
+$font-family-monospace: "Lucida Console" !default;
+$monospace-font-weight: 200 !default;
 
-$headings-font-family: "IBM Plex Sans" !default;
-$headings-font-weight: 600 !default;
+$headings-font-family: "Arial" !default;
+$headings-font-weight: 500 !default;
 
-$navbar-font-family: "IBM Plex Sans" !default;
-$toc-font-family: "IBM Plex Sans" !default;
-$footer-font-family: "IBM Plex Sans" !default;
+$navbar-font-family: "Noto Sans" !default;
+$toc-font-family: "Noto Sans" !default;
+$footer-font-family: "Noto Sans" !default;
 
 // $font-size-base: 1.1rem !default; // Assumes the browser default, typically `16px`
 // $font-size-sm: $font-size-base * .875 !default;
@@ -97,7 +98,11 @@ $footer-fg: $gray-300 !default;
 
 /*-- scss:rules --*/
 
-$web-font-path: "https://fonts.googleapis.com/css2?family=Noto+Sans&IBM+Plex+Sans&Fira+Code&display=swap" !default;
+$web-font-path: "https://fonts.googleapis.com/css2?family=Fira+Code:wght@200..900&display=swap" !default;
+
+@if $web-font-path {
+    @import url($web-font-path);
+}
 
 body {
     -webkit-font-smoothing: antialiased;
@@ -400,5 +405,18 @@ pre.text, pre.sourceCode, .cell-output pre {
 
     @media (max-width: map-get($grid-breakpoints, md)) {
         left: 0;
+    }
+}
+
+.cv-download {
+    font-family: $font-family-sans-serif;
+    background-color: $purple;
+    border-color: $purple;
+    color: $white;
+
+    &:hover {
+        background-color: $purple;
+        border-color: $purple;
+        color: $yellow;
     }
 }
