@@ -1,5 +1,5 @@
 # Publication list 
-Author: Anatoly Tsyplenkov, Created: Apr 2023
+Author: Anatoly Tsyplenkov, Created: Aug 2023
 
 1. <li class='list-group-item'>Belyakova, P., Moreydo, V., **Tsyplenkov, A.**, Amerbaev, A., Grechishnikova, D., Kurochkina, L., Filippov, V., Makeev, M.. 2022. _Forecasting Water Levels in Krasnodar Krai Rivers with the Use of Machine Learning_. Water Resources 49: 10--22. DOI: 10.1134/S0097807822010043</li>
 2. <li class='list-group-item'>Chalov, S. R., **Tsyplenkov, A. S.**, Shkolnyi, D. I., Prokopeva, K. N., Bahareva, E. I.. 2022. _Overland Runoff and Its Impact on Hydrobiont Mortality in Avachinsky Gulf (Pacific Ocean, Kamchatka)_. Proceedings of the Russian Geographical Society 4: 1--14. DOI: 10.31857/S0869607122040048</li>
