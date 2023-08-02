@@ -57,7 +57,7 @@ format:
     footnotes-hover: true
     fig-cap-location: margin
     reference-location: margin
-    highlight-style: haddock
+    highlight-style: github
 
 execute:
   freeze: auto
