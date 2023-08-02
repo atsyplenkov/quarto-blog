@@ -152,6 +152,7 @@ entries <-
   df %>% 
   mutate(year = YEAR) %>% 
   filter(CATEGORY == "ARTICLE") %>% 
+  filter(str_to_lower(LANGID) != "russian") |> 
   rowid_to_column() %>% 
   group_by(YEAR, rowid) %>% 
   nest() %>% 
@@ -219,9 +220,9 @@ df_to_tex <-
       paste(., collapse = ", ") 
     
     # Title
-    title <- paste0("_", .data$TITLE, "_") %>% 
-      str_remove_all("(\\})") %>% 
-      str_remove_all("(\\{)") 
+    title <- paste0("_", .data$TITLE, "_") |> 
+      str_remove_all("(\\})|(\\}\\})") %>%
+      str_remove_all("(\\{)|(\\{\\{)")
     
     # Journal
     journal <- .data$JOURNAL
