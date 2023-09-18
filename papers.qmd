@@ -151,7 +151,8 @@ make_entry <-
 entries <-
   df %>% 
   mutate(year = YEAR) %>% 
-  filter(CATEGORY == "ARTICLE") %>% 
+  # filter(CATEGORY %in% c("ARTICLE", "INCOLLECTION")) |> 
+  filter(CATEGORY == "ARTICLE") %>%
   filter(str_to_lower(LANGID) != "russian") |> 
   rowid_to_column() %>% 
   group_by(YEAR, rowid) %>% 
@@ -204,7 +205,7 @@ library(textcat)
 df_en <- 
   df %>% 
   arrange(-YEAR) %>% 
-  filter(CATEGORY == "ARTICLE") %>% 
+  filter(CATEGORY %in% c("ARTICLE")) %>% 
   filter(str_to_lower(LANGID) != "russian")
 
 df_to_tex <- 
