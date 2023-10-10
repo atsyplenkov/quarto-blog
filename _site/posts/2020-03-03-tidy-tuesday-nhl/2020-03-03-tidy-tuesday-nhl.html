@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.398">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -86,7 +86,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -109,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://atsyplenkov.ru/">
 <meta property="og:title" content="Anatoly Tsyplenkov - Tidy Tuesday NHL">
-<meta property="og:description" content="">
+<meta property="og:description" content="Personal website of Anatoly Tsyplenkov">
 <meta property="og:image" content="https://atsyplenkov.ru/social-media-logo.webp">
 
 <!-- Twitter -->
@@ -122,17 +128,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="Anatoly Tsyplenkov - Tidy Tuesday NHL">
 <meta property="og:description" content="Okay, here it is. My first contribution to the my website. I’ll try to make a very quick and simple data exploration analysis for this weeks’ Tidy Tuesday. There are three datasets available.">
-<meta property="og:image" content="https://atsyplenkov.ru/posts/2020-03-03-tidy-tuesday-nhl/2020-03-03-tidy-tuesday-nhl_files/figure-html/plot-1.png">
-<meta property="og:site-name" content="Anatoly Tsyplenkov">
-<meta property="og:image:height" content="1728">
-<meta property="og:image:width" content="1152">
+<meta property="og:site_name" content="Anatoly Tsyplenkov">
 <meta name="twitter:title" content="Anatoly Tsyplenkov - Tidy Tuesday NHL">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://atsyplenkov.ru/posts/2020-03-03-tidy-tuesday-nhl/2020-03-03-tidy-tuesday-nhl_files/figure-html/plot-1.png">
+<meta name="twitter:description" content="Personal website of Anatoly Tsyplenkov">
 <meta name="twitter:creator" content="@atsyplen">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="1728">
-<meta name="twitter:image-width" content="1152">
 </head>
 
 <body class="nav-fixed">
@@ -141,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Anatoly Tsyplenkov</span>
     </a>
@@ -153,54 +153,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About me</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../papers.html" rel="" target="">
- <span class="menu-text">Papers</span></a>
+    <a class="nav-link" href="../../papers.html"> 
+<span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../software.html" rel="" target="">
- <span class="menu-text">Software</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../app.html" rel="" target="">
- <span class="menu-text">Apps</span></a>
+    <a class="nav-link" href="../../software.html"> 
+<span class="menu-text">Software</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/atsyplenkov" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/atsyplenkov"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://fosstodon.org/@atsyplenkov" rel="" target=""><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://fosstodon.org/@atsyplenkov"> <i class="bi bi-mastodon" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/atsyplen" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/atsyplen"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://scholar.google.com/citations?user=IcwW-WAAAAAJ&amp;hl=en" rel="" target="">
- <span class="menu-text"><i class="ai  ai-google-scholar ai-xl"></i></span></a>
+    <a class="nav-link" href="https://scholar.google.com/citations?user=IcwW-WAAAAAJ&amp;hl=en"> 
+<span class="menu-text"><i class="ai  ai-google-scholar ai-xl"></i></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://www.researchgate.net/profile/Anatolii_Tsyplenkov" rel="" target="">
- <span class="menu-text"><i class="ai  ai-researchgate ai-xl"></i></span></a>
+    <a class="nav-link" href="https://www.researchgate.net/profile/Anatolii_Tsyplenkov"> 
+<span class="menu-text"><i class="ai  ai-researchgate ai-xl"></i></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -245,21 +241,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <p>Okay, here it is. My first contribution to the my website. I’ll try to make a very quick and simple data exploration analysis for this weeks’ <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-03-03/readme.md">Tidy Tuesday</a>. There are three datasets available. I’m not sure that I’ll be able to analyze all of them… Let’s start from the first <code>top_250</code>.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(atslib)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(extrafont)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(hrbrthemes)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(hrbrthemes<span class="sc">::</span><span class="fu">theme_ft_rc</span>(<span class="at">base_family =</span> <span class="st">"Ubuntu Condensed"</span>))</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>top_250 <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-03/top_250.csv'</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>top_250</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(atslib)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(extrafont)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(hrbrthemes)</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">theme_set</span>(hrbrthemes<span class="sc">::</span><span class="fu">theme_ft_rc</span>(<span class="at">base_family =</span> <span class="st">"Ubuntu Condensed"</span>))</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a>top_250 <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-03/top_250.csv'</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a>top_250</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 251 × 9
@@ -285,27 +283,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tidy_250 <span class="ot">&lt;-</span> top_250 <span class="sc">%&gt;%</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year_start =</span> <span class="fu">str_split</span>(years, <span class="st">"-"</span>, <span class="at">simplify =</span> T)[,<span class="dv">1</span>],</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">year_end =</span> <span class="fu">str_split</span>(years, <span class="st">"-"</span>, <span class="at">simplify =</span> T)[,<span class="dv">2</span>]) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_at</span>(<span class="fu">vars</span>(year_start), <span class="sc">~</span><span class="fu">as.numeric</span>(.)) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">century =</span> <span class="fu">ifelse</span>(year_start <span class="sc">&lt;</span> <span class="dv">2000</span>, <span class="dv">19</span>, <span class="dv">20</span>),</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">cc =</span> <span class="fu">str_split</span>(year_start, </span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">as.character</span>(century),</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                        <span class="at">simplify =</span> T)[,<span class="dv">2</span>],</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">cc =</span> <span class="fu">as.numeric</span>(cc)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year_end =</span> <span class="fu">case_when</span>(</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    year_end <span class="sc">&gt;</span> cc <span class="sc">~</span> <span class="fu">paste0</span>(<span class="dv">19</span>, year_end),</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="dv">20</span>, year_end)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_at</span>(<span class="fu">vars</span>(year_start, year_end), <span class="sc">~</span><span class="fu">as.numeric</span>(.)) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># We need to edit millenials ))</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year_end =</span> <span class="fu">ifelse</span>(year_end <span class="sc">&lt;</span> year_start,</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                           year_end <span class="sc">+</span> <span class="dv">100</span>,</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                           year_end)) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(player, total_goals, year_start, year_end) </span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>tidy_250</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>tidy_250 <span class="ot">&lt;-</span> top_250 <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">mutate</span>(<span class="at">year_start =</span> <span class="fu">str_split</span>(years, <span class="st">"-"</span>, <span class="at">simplify =</span> T)[,<span class="dv">1</span>],</span>
+<span id="cb3-3"><a href="#cb3-3"></a>         <span class="at">year_end =</span> <span class="fu">str_split</span>(years, <span class="st">"-"</span>, <span class="at">simplify =</span> T)[,<span class="dv">2</span>]) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">mutate_at</span>(<span class="fu">vars</span>(year_start), <span class="sc">~</span><span class="fu">as.numeric</span>(.)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="fu">mutate</span>(<span class="at">century =</span> <span class="fu">ifelse</span>(year_start <span class="sc">&lt;</span> <span class="dv">2000</span>, <span class="dv">19</span>, <span class="dv">20</span>),</span>
+<span id="cb3-6"><a href="#cb3-6"></a>         <span class="at">cc =</span> <span class="fu">str_split</span>(year_start, </span>
+<span id="cb3-7"><a href="#cb3-7"></a>                        <span class="fu">as.character</span>(century),</span>
+<span id="cb3-8"><a href="#cb3-8"></a>                        <span class="at">simplify =</span> T)[,<span class="dv">2</span>],</span>
+<span id="cb3-9"><a href="#cb3-9"></a>         <span class="at">cc =</span> <span class="fu">as.numeric</span>(cc)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>  <span class="fu">mutate</span>(<span class="at">year_end =</span> <span class="fu">case_when</span>(</span>
+<span id="cb3-11"><a href="#cb3-11"></a>    year_end <span class="sc">&gt;</span> cc <span class="sc">~</span> <span class="fu">paste0</span>(<span class="dv">19</span>, year_end),</span>
+<span id="cb3-12"><a href="#cb3-12"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="dv">20</span>, year_end)</span>
+<span id="cb3-13"><a href="#cb3-13"></a>  )) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-14"><a href="#cb3-14"></a>  <span class="fu">mutate_at</span>(<span class="fu">vars</span>(year_start, year_end), <span class="sc">~</span><span class="fu">as.numeric</span>(.)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-15"><a href="#cb3-15"></a>  <span class="co"># We need to edit millenials ))</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>  <span class="fu">mutate</span>(<span class="at">year_end =</span> <span class="fu">ifelse</span>(year_end <span class="sc">&lt;</span> year_start,</span>
+<span id="cb3-17"><a href="#cb3-17"></a>                           year_end <span class="sc">+</span> <span class="dv">100</span>,</span>
+<span id="cb3-18"><a href="#cb3-18"></a>                           year_end)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-19"><a href="#cb3-19"></a>  <span class="fu">select</span>(player, total_goals, year_start, year_end) </span>
+<span id="cb3-20"><a href="#cb3-20"></a></span>
+<span id="cb3-21"><a href="#cb3-21"></a>tidy_250</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 251 × 4
@@ -329,50 +327,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tidy_50 <span class="ot">&lt;-</span> tidy_250 <span class="sc">%&gt;%</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">50</span>, total_goals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>tidy_50 <span class="ot">&lt;-</span> tidy_250 <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">top_n</span>(<span class="dv">50</span>, total_goals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>I prefer to use discrete color scale instead of continuous. So I’m going to convert <code>total_goals</code> into factor. I really like to do it interactively with a new <a href="https://juba.github.io/questionr/reference/icut.html">questionr</a> package! So easy!</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Cutting tidy_50$total_goals into tidy_50$total_goals_rec</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>tidy_50<span class="sc">$</span>total_goals_rec <span class="ot">&lt;-</span> <span class="fu">cut</span>(tidy_50<span class="sc">$</span>total_goals,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">include.lowest=</span><span class="cn">TRUE</span>,  <span class="at">right=</span><span class="cn">TRUE</span>,</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">400</span>, <span class="dv">500</span>, <span class="dv">600</span>, <span class="dv">700</span>, <span class="dv">800</span>, <span class="dv">900</span>),</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                               <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"400-500"</span>,</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                                          <span class="st">"500-600"</span>,</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                                          <span class="st">"600-700"</span>,</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                                          <span class="st">"700-800"</span>,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>                                          <span class="st">"800-900"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="do">## Cutting tidy_50$total_goals into tidy_50$total_goals_rec</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>tidy_50<span class="sc">$</span>total_goals_rec <span class="ot">&lt;-</span> <span class="fu">cut</span>(tidy_50<span class="sc">$</span>total_goals,</span>
+<span id="cb6-3"><a href="#cb6-3"></a>                               <span class="at">include.lowest=</span><span class="cn">TRUE</span>,  <span class="at">right=</span><span class="cn">TRUE</span>,</span>
+<span id="cb6-4"><a href="#cb6-4"></a>                               <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">400</span>, <span class="dv">500</span>, <span class="dv">600</span>, <span class="dv">700</span>, <span class="dv">800</span>, <span class="dv">900</span>),</span>
+<span id="cb6-5"><a href="#cb6-5"></a>                               <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"400-500"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6"></a>                                          <span class="st">"500-600"</span>,</span>
+<span id="cb6-7"><a href="#cb6-7"></a>                                          <span class="st">"600-700"</span>,</span>
+<span id="cb6-8"><a href="#cb6-8"></a>                                          <span class="st">"700-800"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9"></a>                                          <span class="st">"800-900"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Okay, so everything is ready for a plot! Please, notice, that I’ve already set the <code>ggplot</code> theme in the first <code>r</code> chunk via <code>theme_set</code>. I prefer to use dark themes everywhere so for this post I’ll also use a dark one. Bob Rudis (<a href="https://twitter.com/hrbrmstr">hrbrmstr</a>) has created a really nice one in his <a href="https://github.com/hrbrmstr/hrbrthemes">hrbrthemes</a>.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggalt)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(paletteer)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>tidy_50 <span class="sc">%&gt;%</span> </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">len =</span> year_end <span class="sc">-</span> year_start) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">player =</span> <span class="fu">fct_reorder</span>(player, year_start)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year_start,</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">xend =</span> year_end,</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> player,</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>             <span class="at">group =</span> player)) <span class="sc">+</span> </span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  ggalt<span class="sc">::</span><span class="fu">geom_dumbbell</span>(<span class="fu">aes</span>(<span class="at">color =</span> total_goals_rec),</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>                <span class="at">size_x =</span> <span class="fl">1.3</span>,</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>                <span class="at">size_xend =</span> <span class="fl">1.3</span>,</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>                <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Years active"</span>, <span class="at">y =</span> <span class="st">""</span>,</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"NHL Career Leaders and Records for Goals"</span>,</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"TOP 50"</span>,</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Made by @atsyplen as a #TidyTuesday contribution"</span>) <span class="sc">+</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  paletteer<span class="sc">::</span><span class="fu">scale_color_paletteer_d</span>(<span class="at">name =</span> <span class="st">"Total goals:"</span>,</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"wesanderson::Zissou1"</span>) <span class="sc">+</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">library</span>(ggalt)</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">library</span>(paletteer)</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a>tidy_50 <span class="sc">%&gt;%</span> </span>
+<span id="cb7-5"><a href="#cb7-5"></a>  <span class="fu">mutate</span>(<span class="at">len =</span> year_end <span class="sc">-</span> year_start) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="fu">mutate</span>(<span class="at">player =</span> <span class="fu">fct_reorder</span>(player, year_start)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year_start,</span>
+<span id="cb7-8"><a href="#cb7-8"></a>             <span class="at">xend =</span> year_end,</span>
+<span id="cb7-9"><a href="#cb7-9"></a>             <span class="at">y =</span> player,</span>
+<span id="cb7-10"><a href="#cb7-10"></a>             <span class="at">group =</span> player)) <span class="sc">+</span> </span>
+<span id="cb7-11"><a href="#cb7-11"></a>  ggalt<span class="sc">::</span><span class="fu">geom_dumbbell</span>(<span class="fu">aes</span>(<span class="at">color =</span> total_goals_rec),</span>
+<span id="cb7-12"><a href="#cb7-12"></a>                <span class="at">size_x =</span> <span class="fl">1.3</span>,</span>
+<span id="cb7-13"><a href="#cb7-13"></a>                <span class="at">size_xend =</span> <span class="fl">1.3</span>,</span>
+<span id="cb7-14"><a href="#cb7-14"></a>                <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Years active"</span>, <span class="at">y =</span> <span class="st">""</span>,</span>
+<span id="cb7-16"><a href="#cb7-16"></a>       <span class="at">title =</span> <span class="st">"NHL Career Leaders and Records for Goals"</span>,</span>
+<span id="cb7-17"><a href="#cb7-17"></a>       <span class="at">subtitle =</span> <span class="st">"TOP 50"</span>,</span>
+<span id="cb7-18"><a href="#cb7-18"></a>       <span class="at">caption =</span> <span class="st">"Made by @atsyplen as a #TidyTuesday contribution"</span>) <span class="sc">+</span></span>
+<span id="cb7-19"><a href="#cb7-19"></a>  paletteer<span class="sc">::</span><span class="fu">scale_color_paletteer_d</span>(<span class="at">name =</span> <span class="st">"Total goals:"</span>,</span>
+<span id="cb7-20"><a href="#cb7-20"></a>                                     <span class="st">"wesanderson::Zissou1"</span>) <span class="sc">+</span></span>
+<span id="cb7-21"><a href="#cb7-21"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="2020-03-03-tidy-tuesday-nhl_files/figure-html/plot-1.png" class="img-fluid" width="576"></p>
@@ -382,51 +380,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tidy_250 <span class="sc">%&gt;%</span> </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">len =</span> year_end <span class="sc">-</span> year_start) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">len =</span> <span class="fu">cut</span>(len,</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">include.lowest=</span><span class="cn">TRUE</span>,  <span class="at">right=</span><span class="cn">TRUE</span>,</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>, <span class="dv">40</span>),</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">labels =</span> <span class="fu">c</span>(</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"5-10"</span>,</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"10-15"</span>,</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"15-20"</span>,</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"20-25"</span>,</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"25-30"</span>,</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"30-35"</span>,</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"35-40"</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>                   ))) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(len) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">outlier.high =</span> total_goals <span class="sc">&gt;</span> <span class="fu">quantile</span>(total_goals, .<span class="dv">75</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> <span class="fl">1.50</span><span class="sc">*</span><span class="fu">IQR</span>(total_goals, <span class="at">na.rm =</span> T),</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>         <span class="at">outlier.low =</span> total_goals <span class="sc">&lt;</span> <span class="fu">quantile</span>(total_goals, .<span class="dv">25</span>, <span class="at">na.rm =</span> T) <span class="sc">-</span> <span class="fl">1.50</span><span class="sc">*</span><span class="fu">IQR</span>(total_goals, <span class="at">na.rm =</span> T),</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>         <span class="at">outlier.color =</span> <span class="fu">case_when</span>(outlier.high <span class="sc">~</span> <span class="st">"red"</span>,</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>                                   outlier.low <span class="sc">~</span> <span class="st">"steelblue"</span>,</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>                                   outlier.low <span class="sc">==</span> F <span class="sc">|</span> outlier.high <span class="sc">==</span> F <span class="sc">~</span> <span class="st">"black"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> len, <span class="at">y =</span> total_goals)) <span class="sc">+</span></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_boxplot</span>(<span class="at">geom =</span><span class="st">'errorbar'</span>,</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>               <span class="at">width =</span> .<span class="dv">25</span>,</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>               <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outlier.shape =</span> <span class="cn">NA</span>,</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>               <span class="at">color =</span> <span class="st">"white"</span>,</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="st">"white"</span>,</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> .<span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(<span class="at">color =</span> outlier.color),</span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>              <span class="at">width =</span> .<span class="dv">1</span>,</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> .<span class="dv">6</span>,</span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>              <span class="at">show.legend =</span> F) <span class="sc">+</span></span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">100</span>, <span class="dv">900</span>, <span class="dv">100</span>),</span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">seq</span>(<span class="dv">100</span>, <span class="dv">900</span>, <span class="dv">100</span>)) <span class="sc">+</span></span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>  ggrepel<span class="sc">::</span><span class="fu">geom_text_repel</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(len) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>                             <span class="fu">filter</span>(total_goals <span class="sc">==</span> <span class="fu">max</span>(total_goals)),</span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">aes</span>(<span class="at">label =</span> player), <span class="at">segment.colour =</span> <span class="st">"white"</span>,</span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>                           <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">family =</span> <span class="st">"Ubuntu Condensed"</span>) <span class="sc">+</span></span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>  ggsci<span class="sc">::</span><span class="fu">scale_color_lancet</span>() <span class="sc">+</span></span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Total goals scored in career"</span>,</span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Career length, years"</span>,</span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"NHL Career Leaders and Records for Goals"</span>,</span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"TOP 250"</span>,</span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Made by @atsyplen as a #TidyTuesday contribution"</span>) <span class="sc">+</span></span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.x =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>tidy_250 <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">mutate</span>(<span class="at">len =</span> year_end <span class="sc">-</span> year_start) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">mutate</span>(<span class="at">len =</span> <span class="fu">cut</span>(len,</span>
+<span id="cb8-4"><a href="#cb8-4"></a>                   <span class="at">include.lowest=</span><span class="cn">TRUE</span>,  <span class="at">right=</span><span class="cn">TRUE</span>,</span>
+<span id="cb8-5"><a href="#cb8-5"></a>                   <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>, <span class="dv">40</span>),</span>
+<span id="cb8-6"><a href="#cb8-6"></a>                   <span class="at">labels =</span> <span class="fu">c</span>(</span>
+<span id="cb8-7"><a href="#cb8-7"></a>                     <span class="st">"5-10"</span>,</span>
+<span id="cb8-8"><a href="#cb8-8"></a>                     <span class="st">"10-15"</span>,</span>
+<span id="cb8-9"><a href="#cb8-9"></a>                     <span class="st">"15-20"</span>,</span>
+<span id="cb8-10"><a href="#cb8-10"></a>                     <span class="st">"20-25"</span>,</span>
+<span id="cb8-11"><a href="#cb8-11"></a>                     <span class="st">"25-30"</span>,</span>
+<span id="cb8-12"><a href="#cb8-12"></a>                     <span class="st">"30-35"</span>,</span>
+<span id="cb8-13"><a href="#cb8-13"></a>                     <span class="st">"35-40"</span></span>
+<span id="cb8-14"><a href="#cb8-14"></a>                   ))) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-15"><a href="#cb8-15"></a>  <span class="fu">group_by</span>(len) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-16"><a href="#cb8-16"></a>  <span class="fu">mutate</span>(<span class="at">outlier.high =</span> total_goals <span class="sc">&gt;</span> <span class="fu">quantile</span>(total_goals, .<span class="dv">75</span>, <span class="at">na.rm =</span> T) <span class="sc">+</span> <span class="fl">1.50</span><span class="sc">*</span><span class="fu">IQR</span>(total_goals, <span class="at">na.rm =</span> T),</span>
+<span id="cb8-17"><a href="#cb8-17"></a>         <span class="at">outlier.low =</span> total_goals <span class="sc">&lt;</span> <span class="fu">quantile</span>(total_goals, .<span class="dv">25</span>, <span class="at">na.rm =</span> T) <span class="sc">-</span> <span class="fl">1.50</span><span class="sc">*</span><span class="fu">IQR</span>(total_goals, <span class="at">na.rm =</span> T),</span>
+<span id="cb8-18"><a href="#cb8-18"></a>         <span class="at">outlier.color =</span> <span class="fu">case_when</span>(outlier.high <span class="sc">~</span> <span class="st">"red"</span>,</span>
+<span id="cb8-19"><a href="#cb8-19"></a>                                   outlier.low <span class="sc">~</span> <span class="st">"steelblue"</span>,</span>
+<span id="cb8-20"><a href="#cb8-20"></a>                                   outlier.low <span class="sc">==</span> F <span class="sc">|</span> outlier.high <span class="sc">==</span> F <span class="sc">~</span> <span class="st">"black"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-21"><a href="#cb8-21"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> len, <span class="at">y =</span> total_goals)) <span class="sc">+</span></span>
+<span id="cb8-22"><a href="#cb8-22"></a>  <span class="fu">stat_boxplot</span>(<span class="at">geom =</span><span class="st">'errorbar'</span>,</span>
+<span id="cb8-23"><a href="#cb8-23"></a>               <span class="at">width =</span> .<span class="dv">25</span>,</span>
+<span id="cb8-24"><a href="#cb8-24"></a>               <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb8-25"><a href="#cb8-25"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outlier.shape =</span> <span class="cn">NA</span>,</span>
+<span id="cb8-26"><a href="#cb8-26"></a>               <span class="at">color =</span> <span class="st">"white"</span>,</span>
+<span id="cb8-27"><a href="#cb8-27"></a>               <span class="at">fill =</span> <span class="st">"white"</span>,</span>
+<span id="cb8-28"><a href="#cb8-28"></a>               <span class="at">alpha =</span> .<span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb8-29"><a href="#cb8-29"></a>  <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(<span class="at">color =</span> outlier.color),</span>
+<span id="cb8-30"><a href="#cb8-30"></a>              <span class="at">width =</span> .<span class="dv">1</span>,</span>
+<span id="cb8-31"><a href="#cb8-31"></a>              <span class="at">alpha =</span> .<span class="dv">6</span>,</span>
+<span id="cb8-32"><a href="#cb8-32"></a>              <span class="at">show.legend =</span> F) <span class="sc">+</span></span>
+<span id="cb8-33"><a href="#cb8-33"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">100</span>, <span class="dv">900</span>, <span class="dv">100</span>),</span>
+<span id="cb8-34"><a href="#cb8-34"></a>                     <span class="at">labels =</span> <span class="fu">seq</span>(<span class="dv">100</span>, <span class="dv">900</span>, <span class="dv">100</span>)) <span class="sc">+</span></span>
+<span id="cb8-35"><a href="#cb8-35"></a>  ggrepel<span class="sc">::</span><span class="fu">geom_text_repel</span>(<span class="at">data =</span> . <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(len) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-36"><a href="#cb8-36"></a>                             <span class="fu">filter</span>(total_goals <span class="sc">==</span> <span class="fu">max</span>(total_goals)),</span>
+<span id="cb8-37"><a href="#cb8-37"></a>                           <span class="fu">aes</span>(<span class="at">label =</span> player), <span class="at">segment.colour =</span> <span class="st">"white"</span>,</span>
+<span id="cb8-38"><a href="#cb8-38"></a>                           <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">family =</span> <span class="st">"Ubuntu Condensed"</span>) <span class="sc">+</span></span>
+<span id="cb8-39"><a href="#cb8-39"></a>  ggsci<span class="sc">::</span><span class="fu">scale_color_lancet</span>() <span class="sc">+</span></span>
+<span id="cb8-40"><a href="#cb8-40"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Total goals scored in career"</span>,</span>
+<span id="cb8-41"><a href="#cb8-41"></a>       <span class="at">x =</span> <span class="st">"Career length, years"</span>,</span>
+<span id="cb8-42"><a href="#cb8-42"></a>       <span class="at">title =</span> <span class="st">"NHL Career Leaders and Records for Goals"</span>,</span>
+<span id="cb8-43"><a href="#cb8-43"></a>       <span class="at">subtitle =</span> <span class="st">"TOP 250"</span>,</span>
+<span id="cb8-44"><a href="#cb8-44"></a>       <span class="at">caption =</span> <span class="st">"Made by @atsyplen as a #TidyTuesday contribution"</span>) <span class="sc">+</span></span>
+<span id="cb8-45"><a href="#cb8-45"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.x =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="2020-03-03-tidy-tuesday-nhl_files/figure-html/boxplot-1.png" class="img-fluid" width="672"></p>
@@ -438,6 +436,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{tsyplenkov2020,
   author = {Tsyplenkov, Anatoly},
   title = {Tidy {Tuesday} {NHL}},
+  pages = {undefined},
   date = {2020-03-03},
   url = {https://atsyplenkov.ru/posts/2020-03-03-tidy-tuesday-nhl/2020-03-03-tidy-tuesday-nhl.html},
   langid = {en}
@@ -525,10 +524,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -538,8 +536,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -552,6 +559,128 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -595,6 +724,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -620,6 +750,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -681,14 +837,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <script src="https://giscus.app/client.js" data-repo="atsyplenkov/quarto-blog" data-repo-id="R_kgDOH2LBBQ" data-category="General" data-category-id="DIC_kwDOH2LBBc4CQ6s3" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><span class="faux-block"><i class="fa-brands fa-creative-commons" aria-hidden="true"></i> 2020-2023 Anatoly Tsyplenkov</span> <span class="faux-block">All content licensed under<br><a href="https://creativecommons.org/licenses/by-sa/4.0/"><i class="fa-brands fa-creative-commons" aria-hidden="true"></i> <i class="fa-brands fa-creative-commons-by" aria-hidden="true"></i> <i class="fa-brands fa-creative-commons-sa" aria-hidden="true"></i> Creative Commons CC BY-SA 4.0</a></span></div>   
-    <div class="nav-footer-center"><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-hidden="true"></i> and <a href="https://quarto.org/">Quarto</a></span> <span class="faux-block"><a href="https://github.com/atsyplenkov/quarto-blog">View the source at <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></span></div>
-    <div class="nav-footer-right"><span class="faux-block"> <a href="../../index.xml"><i class="fa-solid fa-rss" aria-hidden="true"></i></a></span> <span class="faux-block"> <a href="mailto:atsyplenkov@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></span></div>
+    <div class="nav-footer-left">
+<p><span class="faux-block"><i class="fa-brands fa-creative-commons" aria-hidden="true"></i> 2020-2023 Anatoly Tsyplenkov</span> <span class="faux-block">All content licensed under<br><a href="https://creativecommons.org/licenses/by-sa/4.0/"><i class="fa-brands fa-creative-commons" aria-hidden="true"></i> <i class="fa-brands fa-creative-commons-by" aria-hidden="true"></i> <i class="fa-brands fa-creative-commons-sa" aria-hidden="true"></i> Creative Commons CC BY-SA 4.0</a></span></p>
+</div>   
+    <div class="nav-footer-center">
+<p><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-hidden="true"></i> and <a href="https://quarto.org/">Quarto</a></span> <span class="faux-block"><a href="https://github.com/atsyplenkov/quarto-blog">View the source at <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></span></p>
+</div>
+    <div class="nav-footer-right">
+<p><span class="faux-block"> <a href="../..\index.xml"><i class="fa-solid fa-rss" aria-hidden="true"></i></a></span> <span class="faux-block"> <a href="mailto:atsyplenkov@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></span></p>
+</div>
   </div>
 </footer>
+
 
 
 

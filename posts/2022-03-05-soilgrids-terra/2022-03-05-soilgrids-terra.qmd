@@ -24,7 +24,7 @@ After several `QGIS` and `R` packages updates, I cannot download [SoilGrids](htt
 
 > `ERROR 11: CURL error: SSL certificate problem: unable to get local issuer certificate`
 
-I never managed to fix this issue, so I decided to let it go since everyone is slowly quitting GDAL anyway. Here is my approach to downloading cropped and reprojected SoilGrids raster. There was a really great [tutorial](https://rpubs.com/ials2un/soilgrids_webdav) by Ivan Lizarazo on getting several SoilGrids layers using `rgdal`. My approach is mostly based on it.
+I never managed to fix this issue, so I decided to let it go. Here is my approach to downloading cropped and reprojected SoilGrids raster. There was a really great [tutorial](https://rpubs.com/ials2un/soilgrids_webdav) by Ivan Lizarazo on getting several SoilGrids layers using `rgdal`. My approach is mostly based on it.
 
 ### 1. Boundary layer
 First of all, let's load some boundary layer, i.e., our area of interest (AOI). I will use the default `sf` sample data for North Carolina counties. To reduce the size of AOI, let me select only the first county. The SoilGrids files are stored in Interrupted Goode Homolosine, so I have to reproject our AOI polygon to it.

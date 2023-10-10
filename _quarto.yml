@@ -23,7 +23,7 @@ website:
       - href: "about.qmd"
       - href: "papers.qmd"
       - href: "software.qmd"
-      - href: "app.qmd"
+      # - href: "app.qmd"
     right:
       - icon: github
         href: https://github.com/atsyplenkov
@@ -58,6 +58,7 @@ format:
     fig-cap-location: margin
     reference-location: margin
     highlight-style: github
+    code-line-numbers: true
 
 execute:
   freeze: auto
