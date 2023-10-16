@@ -33,7 +33,7 @@
 
 /* other quarto variables */
 :root {
-  --quarto-font-monospace: "Lucida Console";
+  --quarto-font-monospace: "Courier";
 }
 
 code span.al {

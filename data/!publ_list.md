@@ -1,5 +1,5 @@
 # Publication list 
-Author: Anatoly Tsyplenkov, Created: Sep 2023
+Author: Anatoly Tsyplenkov, Created: Oct 2023
 
 1. <li class='list-group-item'>Kedich, A., Kharchenko, S., **Tsyplenkov, A.**, Golosov, V.. 2023. _Lateral Moraine Failure in the Valley of the Djankuat Catchment (Central Caucasus) and Subsequent Morphodynamics_. Geomorphology 441: 108896. DOI: 10.1016/j.geomorph.2023.108896</li>
 2. <li class='list-group-item'>Kharchenko, S.V., Golosov, V.N., **Tsyplenkov, A.S.**, Fedin, A.V., Uspensky, M.I.. 2023. _Rates of Modern Denudation of a Small Catchment in the Middle Mountain Belt of the Greater Caucasus (Case Study of the Gitche-Gizhgit Catchment)_. Lomonosov Geography Journal 78: 38--51. DOI: 10.55959/MSU0579-9414.5.78.3.4</li>

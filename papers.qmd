@@ -248,7 +248,8 @@ df_to_tex <-
 header <- c(
   paste0("# Publication list \n",
          "Author: Anatoly Tsyplenkov, Created: ",
-         month(Sys.Date(), label = T, locale = "English-US"),
+         month(Sys.Date(), 
+               label = T),
          " ",
          format(Sys.Date(), "%Y"), "\n")
 )
@@ -272,11 +273,13 @@ c(header, entries$paper) %>%
             file = "data/!publ_list.md",
             append = TRUE))
 
-rmarkdown::render("data/!publ_list.md",
-                  output_format = "pdf_document",
-                  output_file = "Tsyplenkov-Anatoly_publications.pdf",
-                  output_dir = "data/",
-                  clean = T,
-                  quiet = T)
+rmarkdown::render(
+  "data/!publ_list.md",
+  output_format = "pdf_document",
+  output_file = "Tsyplenkov-Anatoly_publications.pdf",
+  output_dir = "data/",
+  clean = T,
+  quiet = T
+)
 ```
 
