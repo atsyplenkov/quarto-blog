@@ -1,0 +1,22 @@
+---
+title: 'Supplementary material to poster presentation @ ANZGG 2024'
+subtitle: 'Insights into spatial and temporal changes in suspended sediment yield in the Caucasus Mountains during the Anthropocene'
+date: '2024-02-11'
+categories: [academia]
+citation: false
+image: anzgg2024_caucasus-poster_tsyplenkov.png
+---
+
+Hello World!
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="/data/posters/anzgg2024_caucasus-poster_tsyplenkov.pdf" target="_blank">
+    <i class="fa-solid fa-file-pdf"></i>&ensp;Download Poster
+  </a>
+</p>
+
+<div class="embed-container">
+   <iframe src="/data/posters/anzgg2024_caucasus-poster_tsyplenkov.pdf" title="foo" width="120%" height="960"></iframe>
+</div>
+```
