@@ -5,9 +5,12 @@ date: '2024-02-11'
 categories: [academia]
 citation: false
 image: anzgg2024_caucasus-poster_tsyplenkov.png
+bibliography: references.bib
 ---
 
 Hello World!
+
+Here, you can download a PDF version of our poster and find the underlying research. By the way, all references cited on the poster can be found at the bottom of this page [@harmel2006; @steegen2001; @vanmaercke2015; @williams1989]!
 
 ```{=html}
 <p class="text-center">
@@ -15,8 +18,25 @@ Hello World!
     <i class="fa-solid fa-file-pdf"></i>&ensp;Download Poster
   </a>
 </p>
+```
 
+::: {.callout-tip}
+## BTW
+
+All papers mentioned here are fully reproducible with a bit of R, magic, and God-save-Excel-databases. You can find the code on my GitHub!
+
+- [Tsyplenkov et al., 2019](https://github.com/atsyplenkov/caucasus-sediment-yield)
+- [Golosov & Tsyplenkov, 2021](https://github.com/atsyplenkov/caucasus-sediment-yield2021)
+- [Tsyplenkov et al., 2021](https://github.com/atsyplenkov/sediment-caucasus-anthropocene)
+
+:::
+
+In the current project, together with Prof. Golosov, we estimated the spatio-temporal variability in suspended sediment yield (SSY) and specific water discharge in the Caucasus region. The first two papers coming from this project [@tsyplenkov2019; @golosov2021] made three primary contributions to the regional sediment yield dynamics: 1) we presented the hitherto largest SSY database for the Caucasus region. We found that Caucasus SSY values are similar in range and average to those of catchments in European alpine climatic zones; 2) despite possible significant uncertainties in the SSY values, analysis of this database indicated clear spatial patterns of SSY in the Caucasus; 3) partial correlation analyses demonstrated that proxies of topography such as height above nearest drainage (HAND) and normalized steepness index (Ksn) tend to be among the most important controlling factors of SSY.
+
+The third paper in this series built on the first by diving deeper into the variability of suspended sediment load in the Anthropocene [@tsyplenkov2021]. We used suspended sediment load (SSL) measurements from 33 gauges in the Terek basin (North Caucasus, Russia) for 1925–2018. However, we found that these observations are subject to uncertainty due to sampling strategy and measurement errors. Using a Monte-Carlo approach, we simulated 10,000 alternative values and calculated 95% confidence intervals. We found that SSL has decreased by 1.17%/year on average. The CUSUM and double mass curve analyses suggested that the transition year was 1988–1994 in most cases. The latter is most likely due to a decrease in glacier and arable lands areas due to climate change and the collapse of the USSR. It is critical for catchments with a high cropland fraction in the foothill belt (\<500 m a.s.l.). Our results were less clear for high-altitude (\>1000 m a.s.l.) catchments. Nonetheless, there are several reasons to expect that high-altitude gauging stations are less exposed to a considerable reduction in suspended sediment load.
+
+```{=html}
 <div class="embed-container">
-   <iframe src="/data/posters/anzgg2024_caucasus-poster_tsyplenkov.pdf" title="foo" width="120%" height="960"></iframe>
+   <iframe src="/data/posters/anzgg2024_caucasus-poster_tsyplenkov.pdf#page=1&zoom=20" title="foo" width="100%" height="960"></iframe>
 </div>
 ```

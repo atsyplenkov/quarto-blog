@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -148,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://fosstodon.org/@atsyplenkov"> <i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://fosstodon.org/(atsyplenkov?)"> <i class="bi bi-mastodon" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -225,19 +245,62 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Hello World!</p>
+<p>Here, you can download a PDF version of our poster and find the underlying research. By the way, all references cited on the poster can be found at the bottom of this page <span class="citation" data-cites="harmel2006 steegen2001 vanmaercke2015 williams1989">(<a href="#ref-harmel2006" role="doc-biblioref">Harmel et al. 2006</a>; <a href="#ref-steegen2001" role="doc-biblioref">Steegen and Govers 2001</a>; <a href="#ref-vanmaercke2015" role="doc-biblioref">Vanmaercke et al. 2015</a>; <a href="#ref-williams1989" role="doc-biblioref">Williams and Rosgen 1989</a>)</span>!</p>
 <p class="text-center">
   <a class="btn btn-primary btn-lg cv-download" href="../data/posters/anzgg2024_caucasus-poster_tsyplenkov.pdf" target="_blank">
     <i class="fa-solid fa-file-pdf"></i> Download Poster
   </a>
 </p>
-
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+BTW
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>All papers mentioned here are fully reproducible with a bit of R, magic, and God-save-Excel-databases. You can find the code on my GitHub!</p>
+<ul>
+<li><a href="https://github.com/atsyplenkov/caucasus-sediment-yield">Tsyplenkov et al., 2019</a></li>
+<li><a href="https://github.com/atsyplenkov/caucasus-sediment-yield2021">Golosov &amp; Tsyplenkov, 2021</a></li>
+<li><a href="https://github.com/atsyplenkov/sediment-caucasus-anthropocene">Tsyplenkov et al., 2021</a></li>
+</ul>
+</div>
+</div>
+<p>In the current project, together with Prof.&nbsp;Golosov, we estimated the spatio-temporal variability in suspended sediment yield (SSY) and specific water discharge in the Caucasus region. The first two papers coming from this project <span class="citation" data-cites="tsyplenkov2019 golosov2021">(<a href="#ref-tsyplenkov2019" role="doc-biblioref">A. Tsyplenkov, Vanmaercke, and Golosov 2019</a>; <a href="#ref-golosov2021" role="doc-biblioref">Golosov and Tsyplenkov 2021</a>)</span> made three primary contributions to the regional sediment yield dynamics: 1) we presented the hitherto largest SSY database for the Caucasus region. We found that Caucasus SSY values are similar in range and average to those of catchments in European alpine climatic zones; 2) despite possible significant uncertainties in the SSY values, analysis of this database indicated clear spatial patterns of SSY in the Caucasus; 3) partial correlation analyses demonstrated that proxies of topography such as height above nearest drainage (HAND) and normalized steepness index (Ksn) tend to be among the most important controlling factors of SSY.</p>
+<p>The third paper in this series built on the first by diving deeper into the variability of suspended sediment load in the Anthropocene <span class="citation" data-cites="tsyplenkov2021">(<a href="#ref-tsyplenkov2021" role="doc-biblioref">A. S. Tsyplenkov, Golosov, and Belyakova 2021</a>)</span>. We used suspended sediment load (SSL) measurements from 33 gauges in the Terek basin (North Caucasus, Russia) for 1925–2018. However, we found that these observations are subject to uncertainty due to sampling strategy and measurement errors. Using a Monte-Carlo approach, we simulated 10,000 alternative values and calculated 95% confidence intervals. We found that SSL has decreased by 1.17%/year on average. The CUSUM and double mass curve analyses suggested that the transition year was 1988–1994 in most cases. The latter is most likely due to a decrease in glacier and arable lands areas due to climate change and the collapse of the USSR. It is critical for catchments with a high cropland fraction in the foothill belt (&lt;500 m a.s.l.). Our results were less clear for high-altitude (&gt;1000 m a.s.l.) catchments. Nonetheless, there are several reasons to expect that high-altitude gauging stations are less exposed to a considerable reduction in suspended sediment load.</p>
 <div class="embed-container">
-   <iframe src="../data/posters/anzgg2024_caucasus-poster_tsyplenkov.pdf" title="foo" width="120%" height="960"></iframe>
+   <iframe src="../data/posters/anzgg2024_caucasus-poster_tsyplenkov.pdf#page=1&amp;zoom=20" title="foo" width="100%" height="960"></iframe>
 </div>
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-golosov2021" class="csl-entry" role="listitem">
+Golosov, Valentin, and Anatoly Tsyplenkov. 2021. <span>“Factors Controlling Contemporary Suspended Sediment Yield in the Caucasus Region.”</span> <em>Water</em> 13 (22): 3173. <a href="https://doi.org/10.3390/w13223173">https://doi.org/10.3390/w13223173</a>.
+</div>
+<div id="ref-harmel2006" class="csl-entry" role="listitem">
+Harmel, D., J. Cooper, M. Slade, R. Haney, and G. Arnold. 2006. <span>“Cumulative Uncertainty in Measured Streamflow and Water Quality Data for Small Watersheds.”</span> <em>Transactions of the ASABE</em> 49 (3): 689–701. <a href="https://doi.org/10.13031/2013.20488">https://doi.org/10.13031/2013.20488</a>.
+</div>
+<div id="ref-steegen2001" class="csl-entry" role="listitem">
+Steegen, A., and G. Govers. 2001. <span>“Correction Factors for Estimating Suspended Sediment Export from Loess Catchments.”</span> <em>Earth Surface Processes and Landforms</em> 26 (4): 441–49. https://doi.org/<a href="https://doi.org/10.1002/esp.196">https://doi.org/10.1002/esp.196</a>.
+</div>
+<div id="ref-tsyplenkov2021" class="csl-entry" role="listitem">
+Tsyplenkov, A. S., V. N. Golosov, and P. A. Belyakova. 2021. <span>“How Did the Suspended Sediment Load Change in the North Caucasus During the Anthropocene?”</span> <em>Hydrological Processes</em> 35 (10): 1–20. <a href="https://doi.org/10.1002/hyp.14403">https://doi.org/10.1002/hyp.14403</a>.
+</div>
+<div id="ref-tsyplenkov2019" class="csl-entry" role="listitem">
+Tsyplenkov, Anatoly, Matthias Vanmaercke, and Valentin Golosov. 2019. <span>“Contemporary Suspended Sediment Yield of Caucasus Mountains.”</span> <em>Proceedings of the International Association of Hydrological Sciences</em> 381 (August): 87–93. <a href="https://doi.org/10.5194/piahs-381-87-2019">https://doi.org/10.5194/piahs-381-87-2019</a>.
+</div>
+<div id="ref-vanmaercke2015" class="csl-entry" role="listitem">
+Vanmaercke, Matthias, Jean Poesen, Gerard Govers, and Gert Verstraeten. 2015. <span>“Quantifying Human Impacts on Catchment Sediment Yield: A Continental Approach.”</span> <em>Global and Planetary Change</em> 130 (July): 22–36. <a href="https://doi.org/10.1016/j.gloplacha.2015.04.001">https://doi.org/10.1016/j.gloplacha.2015.04.001</a>.
+</div>
+<div id="ref-williams1989" class="csl-entry" role="listitem">
+Williams, Garnett P., and David L. Rosgen. 1989. <span>“Measured Total Sediment Loads (Suspended Loads and Bedloads) for 93 United States Streams.”</span> <a href="https://pubs.er.usgs.gov/publication/ofr8967">https://pubs.er.usgs.gov/publication/ofr8967</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
