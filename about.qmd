@@ -1,7 +1,7 @@
 ---
 title: About me
 description-meta: "Anatoly Tsyplenkov's CV"
-date: 2024-01-11
+date: 2024-03-04
 published-title: CV last updated
 engine: knitr 
 cv:
@@ -36,7 +36,7 @@ Following my Ph.D. defense at Lomonosov Moscow State University in December 2019
 ```{=html}
 <p class="text-center">
   <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$cv$pdf`" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download current CV
+    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download CV
   </a>
 </p>
 

@@ -7,7 +7,7 @@ resources:
 website:
   title: "Anatoly Tsyplenkov"
   description: "Personal website of Anatoly Tsyplenkov"
-  site-url: https://atsyplenkov.ru
+  site-url: https://anatolii.nz
   repo-url: https://github.com/atsyplenkov/quarto-blog
   open-graph: true
   favicon: favicon.svg
