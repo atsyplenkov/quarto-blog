@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="List of invited talks and given presentations">
 
-<title>Anatoly Tsyplenkov - Software</title>
+<title>Anatoly Tsyplenkov - Talks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -42,6 +43,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -78,8 +81,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anatolii.nz/">
-<meta property="og:title" content="Anatoly Tsyplenkov - Software">
-<meta property="og:description" content="Personal website of Anatoly Tsyplenkov">
+<meta property="og:title" content="Anatoly Tsyplenkov - Talks">
+<meta property="og:description" content="List of invited talks and given presentations">
 <meta property="og:image" content="https://anatolii.nz/social-media-logo.webp">
 
 <!-- Twitter -->
@@ -88,16 +91,13 @@ ul.task-list li input[type="checkbox"] {
 <meta property="twitter:title" content="Anatoly Tsyplenkov personal webpage">
 <meta property="twitter:description" content="Technical notes about R, sediments and maps.">
 <meta property="twitter:image" content="https://anatolii.nz/social-media-logo.webp">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<meta property="og:title" content="Anatoly Tsyplenkov - Software">
-<meta property="og:description" content="The goal of HBVr is to ease the accessebility of HBV Global Parameter maps created by Beck et al.&nbsp;(2020).">
+<meta property="og:title" content="Anatoly Tsyplenkov - Talks">
+<meta property="og:description" content="List of invited talks and given presentations">
 <meta property="og:site_name" content="Anatoly Tsyplenkov">
-<meta name="twitter:title" content="Anatoly Tsyplenkov - Software">
-<meta name="twitter:description" content="Personal website of Anatoly Tsyplenkov">
+<meta name="twitter:title" content="Anatoly Tsyplenkov - Talks">
+<meta name="twitter:description" content="List of invited talks and given presentations">
 <meta name="twitter:creator" content="@atsyplen">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks.html"> 
+    <a class="nav-link active" href="./talks.html" aria-current="page"> 
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./software.html" aria-current="page"> 
+    <a class="nav-link" href="./software.html"> 
 <span class="menu-text">Software</span></a>
   </li>  
 </ul>
@@ -180,11 +180,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#HBVr" id="toc-HBVr" class="nav-link active" data-scroll-target="#HBVr"><code>HBVr</code></a></li>
-  <li><a href="#rusleR" id="toc-rusleR" class="nav-link" data-scroll-target="#rusleR"><code>rusleR</code></a></li>
-  <li><a href="#loadflux" id="toc-loadflux" class="nav-link" data-scroll-target="#loadflux"><code>loadflux</code></a></li>
-  <li><a href="#tgme" id="toc-tgme" class="nav-link" data-scroll-target="#tgme"><code>tgme</code></a></li>
-  <li><a href="#rp5pik" id="toc-rp5pik" class="nav-link" data-scroll-target="#rp5pik"><code>rp5pik</code></a></li>
+  <li><a href="#iag-webinar-oceania-2024" id="toc-iag-webinar-oceania-2024" class="nav-link active" data-scroll-target="#iag-webinar-oceania-2024">IAG Webinar Oceania 2024</a></li>
+  <li><a href="#megapolis-2022" id="toc-megapolis-2022" class="nav-link" data-scroll-target="#megapolis-2022">MEGAPOLIS 2022</a></li>
   </ul>
 </nav>
     </div>
@@ -193,9 +190,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Software</h1>
+<h1 class="title">Talks</h1>
 </div>
 
+<div>
+  <div class="description">
+    List of invited talks and given presentations
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -210,49 +212,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<h2 id="HBVr" class="anchored"><code>HBVr</code></h2>
-<p><img align="right" height="100" src="https://raw.githubusercontent.com/atsyplenkov/HBVr/master/man/figures/logo.webp"> The goal of <code>HBVr</code> is to ease the accessebility of <a href="http://www.gloh2o.org/hbv/">HBV Global Parameter maps</a> created by Beck et al.&nbsp;(<a href="https://doi.org/10.1029/2019JD031485">2020</a>). Therefore this one-function package allows to download any of the cross-validation folds for your particular area of interest (AOI).</p>
-<a class="btn btn-outline-dark btn-sm" ,="" href="https://atsyplenkov.github.io/HBVr/" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-info" role="img" aria-label="Website"></i>
-        Website
-    </a> <a class="btn btn-outline-dark btn-sm" ,="" href="https://github.com/atsyplenkov/HBVr" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-github" role="img" aria-label="Github"></i>
-        Github
-    </a>
-<h2 id="rusleR" class="anchored"><code>rusleR</code></h2>
-<p><img align="right" height="100" src="https://raw.githubusercontent.com/atsyplenkov/rusleR/master/man/figures/logo.svg"> This package offers an <code>R</code> implementation of the Universal Soil Loss Equation (USLE). You can find here a collection of functions to estimate main factors: R-factor, K-factor, LS-factor and C-factor. The package uses <code>terra</code> and <code>Rsagacmd</code> in the backend.</p>
-<a class="btn btn-outline-dark btn-sm" ,="" href="https://atsyplenkov.github.io/rusleR/" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-info" role="img" aria-label="Website"></i>
-        Website
-    </a> <a class="btn btn-outline-dark btn-sm" ,="" href="https://github.com/atsyplenkov/rusleR" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-github" role="img" aria-label="Github"></i>
-        Github
-    </a>
-<h2 id="loadflux" class="anchored"><code>loadflux</code></h2>
-<p><img align="right" height="100" src="https://raw.githubusercontent.com/atsyplenkov/loadflux/master/man/figures/logo.svg"> The <code>loadflux</code> package is build for the comprehensive analysis of the intra-event suspended sediment dynamics. This is a collection of functions created to study water discharge (<code>Q</code>) and suspended sediment concentration (<code>SSC</code>) relationship.</p>
-<a class="btn btn-outline-dark btn-sm" ,="" href="https://atsyplenkov.github.io/loadflux/" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-info" role="img" aria-label="Website"></i>
-        Website
-    </a> <a class="btn btn-outline-dark btn-sm" ,="" href="https://github.com/atsyplenkov/loadflux" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-github" role="img" aria-label="Github"></i>
-        Github
-    </a> <a class="btn btn-outline-dark btn-sm" ,="" href="https://cran.r-project.org/package=loadflux" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-box-seam" role="img" aria-label="Package"></i>
-        Package
-    </a>
-<h2 id="tgme" class="anchored"><code>tgme</code></h2>
-<p><img align="right" height="100" src="https://raw.githubusercontent.com/atsyplenkov/tgme/master/man/figures/logo.svg"> This is a very simple package with only one function <code>tgme</code>. The aim of this package is to send you a message when a job on Rstudio server is done (or on your local machine).</p>
-<p>It is a free alternative to the <a href="https://github.com/richpauloo">Rich Pauloo’s</a> <a href="https://github.com/richpauloo/textme"><code>textme</code></a> package.</p>
-<a class="btn btn-outline-dark btn-sm" ,="" href="https://github.com/atsyplenkov/tgme" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-github" role="img" aria-label="Github"></i>
-        Github
-    </a>
-<h2 id="rp5pik" class="anchored"><code>rp5pik</code></h2>
-<p><img align="right" height="100" src="https://raw.githubusercontent.com/atsyplenkov/rp5pik/master/man/figures/rp5pik_logo.png"> The <code>rp5pik</code> package provides a set of functions to download and preprocess meteorological data from <a href="www.pogodaiklimat.ru">http://www.pogodaiklimat.ru/</a></p>
-<a class="btn btn-outline-dark btn-sm" ,="" href="https://github.com/atsyplenkov/rp5pik" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-github" role="img" aria-label="Github"></i>
-        Github
-    </a>
+<h1 id="iag-webinar-oceania-2024">IAG Webinar Oceania 2024</h1>
+<p>On <strong>5 March 2024</strong> during the <a href="http://www.geomorph.org/international-geomorphology-week-2024/">International Geomorphology Week 2024</a>, I gave an invited talk about</p>
+<p><em>“Data-driven insights on shallow landslide connectivity and sediment delivery to streams”</em></p>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://storage.yandexcloud.net/iag-talk/iag2024_talk.mp4"></video></div>
+<h1 id="megapolis-2022">MEGAPOLIS 2022</h1>
+<p>On <strong>6 December 2022</strong> as a part of the <a href="https://megapolis2022.netlify.app/">Online Young Scientist School MEGAPOLIS 2022</a>, I held a workshop about</p>
+<p><em>“Soil erosion modeling in R”</em></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/B2ian7Gmodc?si=3IXQ4TLD3Hx8eRLn&amp;start=5569" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 
@@ -661,6 +628,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 

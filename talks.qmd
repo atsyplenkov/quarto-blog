@@ -1,0 +1,23 @@
+---
+title: "Talks"
+description: "List of invited talks and given presentations"
+comments: false
+section-divs: false
+echo: false
+editor_options: 
+  chunk_output_type: console
+---
+
+# IAG Webinar Oceania 2024
+On **5 March 2024** during the [International Geomorphology Week 2024](http://www.geomorph.org/international-geomorphology-week-2024/), I gave an invited talk about
+
+*"Data-driven insights on shallow landslide connectivity and sediment delivery to streams"*
+
+{{< video https://storage.yandexcloud.net/iag-talk/iag2024_talk.mp4 >}}
+
+# MEGAPOLIS 2022
+On **6 December 2022** as a part of the [Online Young Scientist School MEGAPOLIS 2022](https://megapolis2022.netlify.app/), I held a workshop about
+
+*"Soil erosion modeling in R"*
+
+{{< video https://www.youtube.com/embed/B2ian7Gmodc?si=3IXQ4TLD3Hx8eRLn&amp;start=5569 >}}

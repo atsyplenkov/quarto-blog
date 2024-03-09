@@ -1,0 +1,15 @@
+{
+  "hash": "c1c9d3c2863d223b25bfe4ee4cad9d23",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Invited talks\ndescription-meta: \"Slides and presentations given\"\ndate: 2024-03-04\npublished-title: Last update\nengine: knitr \ncomments: false\n---\n\n```{=html}\n<iframe src=\"https://onedrive.live.com/embed?resid=DED47D2425237B9E%219267&amp;authkey=!ADQUkO8OooL1Fps&amp;em=2&amp;wdAr=1.7777777777777777\" width=\"1000px\" height=\"560px\" frameborder=\"0\">This is an embedded <a target=\"_blank\" href=\"https://office.com\">Microsoft Office</a> presentation, powered by <a target=\"_blank\" href=\"https://office.com/webapps\">Office</a>.</iframe>\n```",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

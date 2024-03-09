@@ -21,6 +21,8 @@ website:
       - href: "index.qmd"
         text: Home
       - href: "about.qmd"
+      - href: "talks.qmd"
+        text: Talks
       - href: "papers.qmd"
       - href: "software.qmd"
       # - href: "app.qmd"
