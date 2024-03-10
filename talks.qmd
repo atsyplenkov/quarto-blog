@@ -13,7 +13,7 @@ On **5 March 2024** during the [International Geomorphology Week 2024](http://ww
 
 *"Data-driven insights on shallow landslide connectivity and sediment delivery to streams"*
 
-{{< video https://storage.yandexcloud.net/iag-talk/iag2024_talk.mp4 >}}
+{{< video https://storage.yandexcloud.net/iag-talk/iag2024_talk_x264.mp4 >}}
 
 # MEGAPOLIS 2022
 On **6 December 2022** as a part of the [Online Young Scientist School MEGAPOLIS 2022](https://megapolis2022.netlify.app/), I held a workshop about
