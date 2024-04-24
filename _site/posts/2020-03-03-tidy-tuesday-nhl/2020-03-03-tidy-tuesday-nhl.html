@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.415">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -104,28 +104,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 <!-- Primary Meta Tags -->
+
 <title>Anatoly Tsyplenkov personal webpage</title>
+
 <meta name="title" content="Anatoly Tsyplenkov personal webpage">
+
 <meta name="description" content="Technical notes about R, sediments and maps.">
 
+
+
 <!-- Open Graph / Facebook -->
+
 <meta property="og:type" content="website">
+
 <meta property="og:url" content="https://anatolii.nz/">
+
 <meta property="og:title" content="Anatoly Tsyplenkov - Tidy Tuesday NHL">
+
 <meta property="og:description" content="Personal website of Anatoly Tsyplenkov">
+
 <meta property="og:image" content="https://anatolii.nz/social-media-logo.webp">
 
+
+
 <!-- Twitter -->
+
 <meta property="twitter:card" content="summary_large_image">
+
 <meta property="twitter:url" content="https://anatolii.nz/">
+
 <meta property="twitter:title" content="Anatoly Tsyplenkov personal webpage">
+
 <meta property="twitter:description" content="Technical notes about R, sediments and maps.">
+
 <meta property="twitter:image" content="https://anatolii.nz/social-media-logo.webp">
 
 
@@ -142,7 +160,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
@@ -254,7 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Okay, here it is. My first contribution to the my website. I’ll try to make a very quick and simple data exploration analysis for this weeks’ <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-03-03/readme.md">Tidy Tuesday</a>. There are three datasets available. I’m not sure that I’ll be able to analyze all of them… Let’s start from the first <code>top_250</code>.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(atslib)</span>
@@ -288,7 +306,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This dataset contains 250 NHL &amp; WHA career leaders and records for goals. First, we’re going to tidy our dataset a bit. What is the most interesting here is total goals really depends on the career length?</p>
 <p>The information about years of career contains in <code>years</code> variable. It has a structure of <code>YYYY-YY</code>. First of all, let split it to <code>year_start</code> and <code>year_end</code>.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>tidy_250 <span class="ot">&lt;-</span> top_250 <span class="sc">%&gt;%</span> </span>
 <span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">mutate</span>(<span class="at">year_start =</span> <span class="fu">str_split</span>(years, <span class="st">"-"</span>, <span class="at">simplify =</span> T)[,<span class="dv">1</span>],</span>
@@ -332,7 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Great! Now we have a very tidy dataframe. However, if we are going to plot career length of all 250 players, it can be a total mess on the plot. Let’s select only first 50 players using <code>dplyr::top_()</code>.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>tidy_50 <span class="ot">&lt;-</span> tidy_250 <span class="sc">%&gt;%</span> </span>
 <span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">top_n</span>(<span class="dv">50</span>, total_goals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -340,7 +358,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>I prefer to use discrete color scale instead of continuous. So I’m going to convert <code>total_goals</code> into factor. I really like to do it interactively with a new <a href="https://juba.github.io/questionr/reference/icut.html">questionr</a> package! So easy!</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="do">## Cutting tidy_50$total_goals into tidy_50$total_goals_rec</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>tidy_50<span class="sc">$</span>total_goals_rec <span class="ot">&lt;-</span> <span class="fu">cut</span>(tidy_50<span class="sc">$</span>total_goals,</span>
@@ -355,7 +373,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Okay, so everything is ready for a plot! Please, notice, that I’ve already set the <code>ggplot</code> theme in the first <code>r</code> chunk via <code>theme_set</code>. I prefer to use dark themes everywhere so for this post I’ll also use a dark one. Bob Rudis (<a href="https://twitter.com/hrbrmstr">hrbrmstr</a>) has created a really nice one in his <a href="https://github.com/hrbrmstr/hrbrthemes">hrbrthemes</a>.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">library</span>(ggalt)</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="fu">library</span>(paletteer)</span>
@@ -380,12 +398,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-21"><a href="#cb7-21"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><a href="2020-03-03-tidy-tuesday-nhl_files/figure-html/plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="2020-03-03-tidy-tuesday-nhl_files/figure-html/plot-1.png" class="img-fluid" width="576"></a></p>
+<div>
+<figure class="figure">
+<p><a href="2020-03-03-tidy-tuesday-nhl_files/figure-html/plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="2020-03-03-tidy-tuesday-nhl_files/figure-html/plot-1.png" class="img-fluid figure-img" width="576"></a></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Let’s create a bit more meaningful plot. It’s very interesting how <code>total_goals</code> are spread inside career lengths groups! For this one I’d prefer a boxlplot.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>tidy_250 <span class="sc">%&gt;%</span> </span>
 <span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">mutate</span>(<span class="at">len =</span> year_end <span class="sc">-</span> year_start) <span class="sc">%&gt;%</span> </span>
@@ -434,16 +456,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-45"><a href="#cb8-45"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major.x =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><a href="2020-03-03-tidy-tuesday-nhl_files/figure-html/boxplot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="2020-03-03-tidy-tuesday-nhl_files/figure-html/boxplot-1.png" class="img-fluid" width="672"></a></p>
+<div>
+<figure class="figure">
+<p><a href="2020-03-03-tidy-tuesday-nhl_files/figure-html/boxplot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="2020-03-03-tidy-tuesday-nhl_files/figure-html/boxplot-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
 </div>
 </div>
+</div>
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{tsyplenkov2020,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{tsyplenkov2020,
   author = {Tsyplenkov, Anatoly},
   title = {Tidy {Tuesday} {NHL}},
-  pages = {undefined},
   date = {2020-03-03},
   url = {https://anatolii.nz/posts/2020-03-03-tidy-tuesday-nhl/2020-03-03-tidy-tuesday-nhl.html},
   langid = {en}
@@ -531,6 +556,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/anatolii\.nz");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -565,7 +608,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -580,38 +627,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -620,8 +657,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -860,7 +904,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

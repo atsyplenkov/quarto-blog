@@ -1,7 +1,7 @@
 ---
 title: About me
 description-meta: "Anatoly Tsyplenkov's CV"
-date: 2024-03-04
+date: 2024-04-24
 published-title: CV last updated
 engine: knitr 
 cv:

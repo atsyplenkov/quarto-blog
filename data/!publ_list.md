@@ -1,5 +1,5 @@
 # Publication list 
-Author: Anatoly Tsyplenkov, Created: Mar 2024
+Author: Anatoly Tsyplenkov, Created: Apr 2024
 
 1. <li class='list-group-item'>Goncharov, A. V., Georgiadi, A. G., Milyukova, I. P., Semenova, A. A., **Tsyplenkov, A. S.**, Kireeva, M. B., Barabanova, E. A.. 2023. _Hydrological Conditions of Phytophilic Fish Reproduction in the Lower Don River under the Influence of Climate Change and Flow Regulation_. Hydrobiologia NA: NA. DOI: 10.1007/s10750-023-05432-y</li>
 2. <li class='list-group-item'>Kedich, A., Kharchenko, S., **Tsyplenkov, A.**, Golosov, V.. 2023. _Lateral Moraine Failure in the Valley of the Djankuat Catchment (Central Caucasus) and Subsequent Morphodynamics_. Geomorphology 441: 108896. DOI: 10.1016/j.geomorph.2023.108896</li>
