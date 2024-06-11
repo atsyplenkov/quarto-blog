@@ -27,7 +27,7 @@ title-block-banner: false
 toc: false
 include-in-header: meta.html
 comments: false
-execute: 
+execute:
   freeze: false
 ---
 
