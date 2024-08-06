@@ -33,10 +33,10 @@ website:
         href: https://fosstodon.org/@atsyplenkov
       - icon: twitter
         href: https://twitter.com/atsyplen
+      - icon: linkedin
+        href: https://www.linkedin.com/in/atsyplenkov/
       - text: "{{< ai google-scholar size=xl >}}"
         href: https://scholar.google.com/citations?user=IcwW-WAAAAAJ&hl=en
-      - text: "{{< ai researchgate size=xl >}}"
-        href: https://www.researchgate.net/profile/Anatolii_Tsyplenkov
   page-footer:
     left: |
       <span class="faux-block">{{< fa brands creative-commons >}} {{< var years >}} Anatoly Tsyplenkov</span>
