@@ -84,7 +84,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-image','listing-date','listing-description','listing-categories','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 3,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
@@ -264,7 +265,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="academia">academia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="soil erosion">soil erosion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="tidytuesday">tidytuesday <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(3)</span></div><div class="category" data-category="academia">academia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="gpu">gpu <span class="quarto-category-count">(1)</span></div><div class="category" data-category="soil erosion">soil erosion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="tidytuesday">tidytuesday <span class="quarto-category-count">(1)</span></div><div class="category" data-category="xgboost">xgboost <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -299,7 +300,40 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="academia" data-listing-date-sort="1707562800000" data-listing-file-modified-sort="1707454446784" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="406">
+<div class="g-col-1" data-index="0" data-categories="R,gpu,xgboost" data-listing-date-sort="1722859200000" data-listing-file-modified-sort="1723088301200" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1223">
+<a href="./posts/2024/xgboost-gpu-r.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/2024/figures/benchmarks.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Accelerating XGBoost with GPU in R
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('gpu'); return false;">
+gpu
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('xgboost'); return false;">
+xgboost
+</div>
+</div>
+<div class="card-text listing-description">
+Update NVIDIA drivers, install the pre-built <code>{xgboost}</code> library with GPU support, and set <code>device = "cuda"</code> while <code>tree_method = "hist"</code>.
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Aug 6, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="academia" data-listing-date-sort="1707562800000" data-listing-file-modified-sort="1707454446784" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="406">
 <a href="./posts/anzgg2024.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -326,7 +360,7 @@ Feb 11, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="R,soil erosion" data-listing-date-sort="1646391600000" data-listing-file-modified-sort="1707367874221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="943">
+<div class="g-col-1" data-index="2" data-categories="R,soil erosion" data-listing-date-sort="1646391600000" data-listing-file-modified-sort="1707367874221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="943">
 <a href="./posts/2022-03-05-soilgrids-terra/2022-03-05-soilgrids-terra.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts\2022-03-05-soilgrids-terra\2022-03-05-soilgrids-terra_files\figure-html\unnamed-chunk-5-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -354,10 +388,10 @@ Mar 5, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="R,tidytuesday" data-listing-date-sort="1583146800000" data-listing-file-modified-sort="1707367874221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1757">
+<div class="g-col-1" data-index="3" data-categories="R,tidytuesday" data-listing-date-sort="1583146800000" data-listing-file-modified-sort="1707367874221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1757">
 <a href="./posts/2020-03-03-tidy-tuesday-nhl/2020-03-03-tidy-tuesday-nhl.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts\2020-03-03-tidy-tuesday-nhl\2020-03-03-tidy-tuesday-nhl_files\figure-html\plot-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img data-src="posts\2020-03-03-tidy-tuesday-nhl\2020-03-03-tidy-tuesday-nhl_files\figure-html\plot-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Tidy Tuesday NHL
@@ -386,6 +420,9 @@ Mar 3, 2020
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -811,13 +848,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><span class="faux-block"><i class="fa-brands fa-creative-commons" aria-hidden="true"></i> 2020-2024 Anatoly Tsyplenkov</span> <span class="faux-block">All content licensed under<br><a href="https://creativecommons.org/licenses/by-sa/4.0/"><i class="fa-brands fa-creative-commons" aria-hidden="true"></i> <i class="fa-brands fa-creative-commons-by" aria-hidden="true"></i> <i class="fa-brands fa-creative-commons-sa" aria-hidden="true"></i> Creative Commons CC BY-SA 4.0</a></span></p>
+<p><span class="faux-block"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2020-2024 Anatoly Tsyplenkov</span> <span class="faux-block">All content licensed under<br><a href="https://creativecommons.org/licenses/by-sa/4.0/"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-sa" aria-label="creative-commons-sa"></i> Creative Commons CC BY-SA 4.0</a></span></p>
 </div>   
     <div class="nav-footer-center">
-<p><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-hidden="true"></i> and <a href="https://quarto.org/">Quarto</a></span> <span class="faux-block"><a href="https://github.com/atsyplenkov/quarto-blog">View the source at <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></span></p>
+<p><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a></span> <span class="faux-block"><a href="https://github.com/atsyplenkov/quarto-blog">View the source at <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></span></p>
 </div>
     <div class="nav-footer-right">
-<p><span class="faux-block"> <a href=".\index.xml"><i class="fa-solid fa-rss" aria-hidden="true"></i></a></span> <span class="faux-block"> <a href="mailto:atsyplenkov@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></span></p>
+<p><span class="faux-block"> <a href=".\index.xml"><i class="fa-solid fa-rss" aria-label="rss"></i></a></span> <span class="faux-block"> <a href="mailto:atsyplenkov@gmail.com"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a></span></p>
 </div>
   </div>
 </footer>
