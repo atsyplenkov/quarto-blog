@@ -149,13 +149,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="Accelerating XGBoost with GPU in R – Anatoly Tsyplenkov">
 <meta property="og:description" content="Update NVIDIA drivers, install the pre-built {xgboost} library with GPU support, and set device = &quot;cuda&quot; while tree_method = &quot;hist&quot;.">
-<meta property="og:image" content="https://anatolii.nz/posts/2024/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta property="og:image" content="https://anatolii.nz/posts/2024/figures/benchmarks.png">
 <meta property="og:site_name" content="Anatoly Tsyplenkov">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1344">
 <meta name="twitter:title" content="Accelerating XGBoost with GPU in R – Anatoly Tsyplenkov">
 <meta name="twitter:description" content="Personal website of Anatoly Tsyplenkov">
-<meta name="twitter:image" content="https://anatolii.nz/posts/2024/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta name="twitter:image" content="https://anatolii.nz/posts/2024/figures/benchmarks.png">
 <meta name="twitter:creator" content="@atsyplen">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="960">
+<meta name="twitter:image-width" content="1344">
 </head>
 
 <body class="nav-fixed">
@@ -303,7 +307,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="installation-instructions" class="level1 page-columns page-full">
 <h1>Installation instructions</h1>
 <p>According to the official documentation of the <code>{xgboost}</code> library, to run GPU-accelerated models in R, one must download and install the <a href="https://xgboost.readthedocs.io/en/latest/install.html#r"><strong>experimental pre-built binary with GPU support</strong></a> (i.e., not the CRAN version!). Currently, they exist only for Windows <i class="fa-brands fa-windows" aria-label="windows"></i> and Linux <i class="fa-brands fa-linux" aria-label="linux"></i>. They are not built with every release, so it’s a good practice to monitor <a href="https://github.com/dmlc/xgboost/releases">GitHub’s release</a> page for new binaries. While I am writing this post, the <code>2.0.3</code> version is the latest with GPU support for R.</p>
-<p>Currently, only NVIDIA GPUs <a href="https://xgboost.readthedocs.io/en/latest/gpu/index.html">are supported</a> and pre-built binaries are available for Windows and Linux. So, in a nutshell, prerequisites are as follows:</p>
+<p>Currently, only NVIDIA GPUs <a href="https://xgboost.readthedocs.io/en/latest/gpu/index.html">are supported</a>. So, in a nutshell, prerequisites are as follows:</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -320,9 +324,9 @@ Prerequisites:
 </ol>
 </div>
 </div>
-<p>Depending on your operating system, installation instructions may vary. While it is quite straightforward for Windows and Linux, running <code>{xgboost}</code> with GPU on WSL2 requires some additional steps.</p>
+<p>Depending on your operating system, installation instructions may vary. While it is quite straightforward for Windows and Linux, running <code>{xgboost}</code> with GPU on WSL2 <em>may</em> require some additional steps.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Linux <i class="fa-brands fa-debian" aria-label="debian"></i> / <i class="fa-brands fa-ubuntu" aria-label="ubuntu"></i></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Windows <i class="fa-brands fa-windows" aria-label="windows"></i></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">WSL2 <i class="fa-brands fa-linux" aria-label="linux"></i></a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Linux <i class="fa-brands fa-debian" aria-label="debian"></i> / <i class="fa-brands fa-ubuntu" aria-label="ubuntu"></i></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Windows <i class="fa-brands fa-windows" aria-label="windows"></i></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">WSL2 <i class="fa-brands fa-linux" aria-label="linux"></i></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">NixOS ❄</a></li></ul>
 <div class="tab-content page-columns page-full">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>No additional tinkering is required; just be sure that you have installed <a href="https://www.nvidia.com/en-us/drivers/unix/">the latest NVIDIA</a> drivers on your system.</p>
@@ -345,13 +349,14 @@ Prerequisites:
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>By default, WSL2 does have access to your GPU. You can check this by running <code>nvidia-smi</code> in your terminal. If you see something similar to this, you are all set:</p>
+<p>By default, WSL2 should have access to your GPU. You can check this by running <code>nvidia-smi</code> in your terminal. If you see something similar to this, you are all set:</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><a href="figures/WindowsTerminal_kTF31RPuRA.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Checking that WSL2 have access to GPU."><img src="figures/WindowsTerminal_kTF31RPuRA.png" class="img-fluid figure-img" style="width:50.0%" alt="Checking that WSL2 have access to GPU."></a></p>
 <figcaption class="margin-caption">Checking that WSL2 have access to GPU.</figcaption>
 </figure>
 </div>
+<p>If not, try installing <em>CUDA Toolkit</em> following this instructions:</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -373,6 +378,9 @@ CUDA Toolkit
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>xgboost_url <span class="ot">&lt;-</span> <span class="st">"https://s3-us-west-2.amazonaws.com/xgboost-nightly-builds/release_2.0.0/xgboost_r_gpu_linux_82d846bbeb83c652a0b1dff0e3519e67569c4a3d.tar.gz"</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">install.packages</span>(xgboost_url, <span class="at">repos =</span> <span class="cn">NULL</span>, <span class="at">type =</span> <span class="st">"source"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>Via <a href="https://github.com/b-rodrigues/xgboost-gpu-nix">nix shell</a>, created by Bruno Rodrigues.</p>
 </div>
 </div>
 </div>
@@ -433,7 +441,7 @@ CUDA Toolkit
 <span id="cb5-10"><a href="#cb5-10"></a>)</span>
 <span id="cb5-11"><a href="#cb5-11"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>6.98 sec elapsed</code></pre>
+<pre><code>6.8 sec elapsed</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># GPU model</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="fu">tic</span>()</span>
@@ -448,7 +456,7 @@ CUDA Toolkit
 <span id="cb7-11"><a href="#cb7-11"></a>)</span>
 <span id="cb7-12"><a href="#cb7-12"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>1.36 sec elapsed</code></pre>
+<pre><code>1.43 sec elapsed</code></pre>
 </div>
 </div>
 <p>That is! I have <strong>a ≈6x speed increase</strong> while testing it on WSL2.</p>
@@ -1025,7 +1033,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

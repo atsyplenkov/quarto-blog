@@ -19,7 +19,7 @@ However, the most interesting feature is that `{xgboost}` is one of [the few R p
 # Installation instructions
 According to the official documentation of the `{xgboost}` library, to run GPU-accelerated models in R, one must download and install the [**experimental pre-built binary with GPU support**](https://xgboost.readthedocs.io/en/latest/install.html#r) (i.e., not the CRAN version!). Currently, they exist only for Windows {{< fa brands windows >}} and Linux {{< fa brands linux >}}. They are not built with every release, so it's a good practice to monitor [GitHub's release](https://github.com/dmlc/xgboost/releases) page for new binaries. While I am writing this post, the `2.0.3` version is the latest with GPU support for R.
 
-Currently, only NVIDIA GPUs [are supported](https://xgboost.readthedocs.io/en/latest/gpu/index.html) and pre-built binaries are available for Windows and Linux. So, in a nutshell, prerequisites are as follows:
+Currently, only NVIDIA GPUs [are supported](https://xgboost.readthedocs.io/en/latest/gpu/index.html). So, in a nutshell, prerequisites are as follows:
 
 ::: {.callout-important}
 # Prerequisites:
@@ -29,7 +29,7 @@ Currently, only NVIDIA GPUs [are supported](https://xgboost.readthedocs.io/en/la
 
 :::
 
-Depending on your operating system, installation instructions may vary. While it is quite straightforward for Windows and Linux, running `{xgboost}` with GPU on WSL2 requires some additional steps.
+Depending on your operating system, installation instructions may vary. While it is quite straightforward for Windows and Linux, running `{xgboost}` with GPU on WSL2 *may* require some additional steps.
 
 ::: {.panel-tabset}
 ## Linux {{< fa brands debian >}} / {{< fa brands ubuntu >}}
@@ -55,9 +55,11 @@ install.packages(xgboost_url, repos = NULL, type = "source")
 ```
 
 ## WSL2 {{< fa brands linux >}}
-By default, WSL2 does have access to your GPU. You can check this by running `nvidia-smi` in your terminal. If you see something similar to this, you are all set:
+By default, WSL2 should have access to your GPU. You can check this by running `nvidia-smi` in your terminal. If you see something similar to this, you are all set:
 
 ![Checking that WSL2 have access to GPU.](figures/WindowsTerminal_kTF31RPuRA.png){width=50%}
+
+If not, try installing *CUDA Toolkit* following this instructions:
 
 ::: {.callout-note collapse=true}
 # CUDA Toolkit
@@ -66,6 +68,7 @@ One may also be interested in installing the CUDA Toolkit. [This video](https://
 {{< video https://youtu.be/JaHVsZa2jTc?si=b9juw5AJTfrsiH2z
     aspect-ratio="21x9" 
 >}}
+
 :::
 
 ```{r}
@@ -74,6 +77,10 @@ One may also be interested in installing the CUDA Toolkit. [This video](https://
 xgboost_url <- "https://s3-us-west-2.amazonaws.com/xgboost-nightly-builds/release_2.0.0/xgboost_r_gpu_linux_82d846bbeb83c652a0b1dff0e3519e67569c4a3d.tar.gz"
 install.packages(xgboost_url, repos = NULL, type = "source")
 ```
+
+## NixOS ❄
+
+Via [nix shell](https://github.com/b-rodrigues/xgboost-gpu-nix), created by Bruno Rodrigues.
 
 :::
 
