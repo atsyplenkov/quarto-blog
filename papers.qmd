@@ -56,142 +56,142 @@ preprint_button <- "ai arxiv"
 # supporting functions ----
 # highlight your name
 make_bold <-
-    function(x, format = "html") {
-        if (format == "html") {
-            bold <- c("<b>", "</b>")
-        } else if (format == "tex") {
-            bold <- c("**", "**")
-        }
-
-        if (is.na(x)) {
-            y <- x
-        } else if (str_detect(tolower(x), "tsyplenkov|цыпленков")) {
-            y <- paste0(bold[1], x, bold[2])
-        } else {
-            y <- x
-        }
-        return(y)
+  function(x, format = "html") {
+    if (format == "html") {
+      bold <- c("<b>", "</b>")
+    } else if (format == "tex") {
+      bold <- c("**", "**")
     }
+
+    if (is.na(x)) {
+      y <- x
+    } else if (str_detect(tolower(x), "tsyplenkov|цыпленков")) {
+      y <- paste0(bold[1], x, bold[2])
+    } else {
+      y <- x
+    }
+    return(y)
+  }
 
 # create button
 make_button <-
-    function(url, icon) {
-        icon_base <-
-            paste0("[{{< ", icon, " size=xl >}}]")
+  function(url, icon) {
+    icon_base <-
+      paste0("[{{< ", icon, " size=xl >}}]")
 
-        paste0("\n ", icon_base, "(", url, ") ")
-    }
+    paste0("\n ", icon_base, "(", url, ") ")
+  }
 
 # func to create an bibliographic entry
 # I tried to replicate Nature Citation Style
 make_entry <-
-    function(.data) {
-        # Authors
-        authors <-
-            .data$AUTHOR %>%
-            unlist() %>%
-            as.list() %>%
-            map(~ make_bold(.x)) %>%
-            unlist() %>%
-            paste(., collapse = ", ")
+  function(.data) {
+    # Authors
+    authors <-
+      .data$AUTHOR %>%
+      unlist() %>%
+      as.list() %>%
+      map(~ make_bold(.x)) %>%
+      unlist() %>%
+      paste(., collapse = ", ")
 
-        # Title
-        title <- paste0("<i>", .data$TITLE, "</i>") %>%
-            str_remove_all("(\\})") %>%
-            str_remove_all("(\\{)")
+    # Title
+    title <- paste0("<i>", .data$TITLE, "</i>") %>%
+      str_remove_all("(\\})") %>%
+      str_remove_all("(\\{)")
 
-        # Journal
-        journal <- .data$JOURNAL
+    # Journal
+    journal <- .data$JOURNAL
 
-        # Year
-        year <- .data$year
+    # Year
+    year <- .data$year
 
-        # Link
-        url <- case_when(
-            !is.na(.data$DOI) ~ paste0("https://doi.org/", .data$DOI),
-            is.na(.data$DOI) & !is.null(.data$URL) ~ .data$URL,
-            is.na(.data$DOI) & is.null(.data$URL) ~ ""
-        )
+    # Link
+    url <- case_when(
+      !is.na(.data$DOI) ~ paste0("https://doi.org/", .data$DOI),
+      is.na(.data$DOI) & !is.null(.data$URL) ~ .data$URL,
+      is.na(.data$DOI) & is.null(.data$URL) ~ ""
+    )
 
 
-        # Github button
-        github <-
-            case_when(
-                str_detect(.data$URL, "github") ~ make_button(.data$URL, github_button),
-                TRUE ~ ""
-            )
+    # Github button
+    github <-
+      case_when(
+        str_detect(.data$URL, "github") ~ make_button(.data$URL, github_button),
+        TRUE ~ ""
+      )
 
-        # Preprint
-        preprint <-
-            case_when(
-                !is.na(.data$ANNOTATION) ~ make_button(.data$ANNOTATION, preprint_button),
-                TRUE ~ ""
-            )
+    # Preprint
+    preprint <-
+      case_when(
+        !is.na(.data$ANNOTATION) ~ make_button(.data$ANNOTATION, preprint_button),
+        TRUE ~ ""
+      )
 
-        # return collected bibliographic entry
-        paste0(
-            "<li class='list-group-item'>",
-            authors, " ",
-            title, ". ",
-            journal,
-            " (", year, ")",
-            "<br>",
-            make_button(url, doi_button),
-            preprint,
-            github,
-            "</li>"
-        )
-    }
+    # return collected bibliographic entry
+    paste0(
+      "<li class='list-group-item'>",
+      authors, " ",
+      title, ". ",
+      journal,
+      " (", year, ")",
+      "<br>",
+      make_button(url, doi_button),
+      preprint,
+      github,
+      "</li>"
+    )
+  }
 
 # Format every article
 entries <-
-    df %>%
-    mutate(year = YEAR) %>%
-    filter(CATEGORY %in% c("ARTICLE", "INCOLLECTION")) |>
-    # filter(CATEGORY == "ARTICLE") %>%
-    filter(str_to_lower(LANGID) != "russian") |>
-    rowid_to_column() %>%
-    group_by(YEAR, rowid) %>%
-    nest() %>%
-    mutate(paper = map_chr(data, ~ make_entry(.x)))
+  df %>%
+  mutate(year = YEAR) %>%
+  filter(CATEGORY %in% c("ARTICLE", "INCOLLECTION")) |>
+  # filter(CATEGORY == "ARTICLE") %>%
+  filter(str_to_lower(LANGID) != "russian") |>
+  rowid_to_column() %>%
+  group_by(YEAR, rowid) %>%
+  nest() %>%
+  mutate(paper = map_chr(data, ~ make_entry(.x)))
 
 # Create list group item
 entries_year <-
-    entries %>%
-    ungroup() %>%
-    select(-rowid) %>%
-    arrange(-YEAR) %>%
-    group_by(YEAR) %>%
-    mutate(id = row_number()) %>%
-    mutate(paper = case_when(
-        id == first(id) ~ paste0(
-            "<ul class='list-group list-group-flush'>",
-            paper
-        ),
-        id == last(id) ~ paste0(paper, "</ul>"),
-        TRUE ~ paper
-    ))
+  entries %>%
+  ungroup() %>%
+  select(-rowid) %>%
+  arrange(-YEAR) %>%
+  group_by(YEAR) %>%
+  mutate(id = row_number()) %>%
+  mutate(paper = case_when(
+    id == first(id) ~ paste0(
+      "<ul class='list-group list-group-flush'>",
+      paper
+    ),
+    id == last(id) ~ paste0(paper, "</ul>"),
+    TRUE ~ paper
+  ))
 
 # Create an year-header
 entries_year_row <-
-    entries_year[, -2] %>%
-    nest() %>%
-    mutate(data = map(data, ~ add_row(.x,
-        paper = NA_character_,
-        id = 0,
-        .before = 1
-    ))) %>%
-    unnest(c(data)) %>%
-    ungroup() %>%
-    mutate(paper = case_when(
-        is.na(paper) ~ paste0("## ", YEAR, "\n"),
-        TRUE ~ paper
-    ))
+  entries_year[, -2] %>%
+  nest() %>%
+  mutate(data = map(data, ~ add_row(.x,
+    paper = NA_character_,
+    id = 0,
+    .before = 1
+  ))) %>%
+  unnest(c(data)) %>%
+  ungroup() %>%
+  mutate(paper = case_when(
+    is.na(paper) ~ paste0("## ", YEAR, "\n"),
+    TRUE ~ paper
+  ))
 
 # Print it
 entries_year_row$paper %>%
-    as.list() %>%
-    walk(~ cat(.x))
+  as.list() %>%
+  walk(~ cat(.x))
 
 ```
 
@@ -202,87 +202,87 @@ library(rmarkdown)
 library(textcat)
 
 df_en <-
-    df %>%
-    arrange(-YEAR) %>%
-    filter(CATEGORY %in% c("ARTICLE")) %>%
-    filter(str_to_lower(LANGID) != "russian")
+  df %>%
+  arrange(-YEAR) %>%
+  filter(CATEGORY %in% c("ARTICLE")) %>%
+  filter(str_to_lower(LANGID) != "russian")
 
 df_to_tex <-
-    function(.data) {
-        # Authors
-        authors <-
-            .data$AUTHOR %>%
-            unlist() %>%
-            as.list() %>%
-            map(~ make_bold(.x, format = "tex")) %>%
-            unlist() %>%
-            paste(., collapse = ", ")
+  function(.data) {
+    # Authors
+    authors <-
+      .data$AUTHOR %>%
+      unlist() %>%
+      as.list() %>%
+      map(~ make_bold(.x, format = "tex")) %>%
+      unlist() %>%
+      paste(., collapse = ", ")
 
-        # Title
-        title <- paste0("_", .data$TITLE, "_") |>
-            str_remove_all("(\\})|(\\}\\})") %>%
-            str_remove_all("(\\{)|(\\{\\{)")
+    # Title
+    title <- paste0("_", .data$TITLE, "_") |>
+      str_remove_all("(\\})|(\\}\\})") %>%
+      str_remove_all("(\\{)|(\\{\\{)")
 
-        # Journal
-        journal <- .data$JOURNAL
-        year <- .data$year
-        # DOI
-        doi <- case_when(
-            !is.na(.data$DOI) ~ paste0("DOI: ", .data$DOI),
-            is.na(.data$DOI) ~ ""
-        )
+    # Journal
+    journal <- .data$JOURNAL
+    year <- .data$year
+    # DOI
+    doi <- case_when(
+      !is.na(.data$DOI) ~ paste0("DOI: ", .data$DOI),
+      is.na(.data$DOI) ~ ""
+    )
 
-        paste0(
-            "<li class='list-group-item'>",
-            authors, ". ",
-            year, ". ",
-            title, ". ",
-            journal, " ",
-            .data$VOLUME, ": ",
-            .data$PAGES, ". ",
-            doi, "</li>"
-        )
-    }
+    paste0(
+      "<li class='list-group-item'>",
+      authors, ". ",
+      year, ". ",
+      title, ". ",
+      journal, " ",
+      .data$VOLUME, ": ",
+      .data$PAGES, ". ",
+      doi, "</li>"
+    )
+  }
 
 header <- c(
-    paste0(
-        "# Publication list \n",
-        "Author: Anatoly Tsyplenkov, Created: ",
-        month(Sys.Date(),
-            label = T
-        ),
-        " ",
-        format(Sys.Date(), "%Y"), "\n"
-    )
+  paste0(
+    "# Publication list \n",
+    "Author: Anatoly Tsyplenkov, Created: ",
+    month(Sys.Date(),
+      label = T
+    ),
+    " ",
+    format(Sys.Date(), "%Y"), "\n"
+  )
 )
 
 entries <-
-    df_en %>%
-    mutate(year = YEAR) %>%
-    rowid_to_column() %>%
-    group_by(YEAR, rowid) %>%
-    nest() %>%
-    mutate(paper = map_chr(data, ~ df_to_tex(.x))) %>%
-    mutate(paper = paste0("\n", rowid, ". ", paper))
+  df_en %>%
+  mutate(year = YEAR) %>%
+  rowid_to_column() %>%
+  group_by(YEAR, rowid) %>%
+  nest() %>%
+  mutate(paper = map_chr(data, ~ df_to_tex(.x))) %>%
+  mutate(paper = paste0("\n", rowid, ". ", paper))
 
 if (file.exists("data/!publ_list.md")) {
-    fs::file_delete("data/!publ_list.md")
+  fs::file_delete("data/!publ_list.md")
 }
 
 c(header, entries$paper) %>%
-    as.list() %>%
-    walk(~ cat(.x,
-        file = "data/!publ_list.md",
-        append = TRUE
-    ))
+  as.list() %>%
+  walk(~ cat(.x,
+    file = "data/!publ_list.md",
+    append = TRUE
+  ))
 
 rmarkdown::render(
-    "data/!publ_list.md",
-    output_format = "pdf_document",
-    output_file = "Tsyplenkov-Anatoly_publications.pdf",
-    output_dir = "data/",
-    clean = T,
-    quiet = T
+  "data/!publ_list.md",
+  output_format = "pdf_document",
+  output_file = "Tsyplenkov-Anatoly_publications.pdf",
+  output_dir = "data/",
+  clean = T,
+  quiet = T
 )
 ```
 
