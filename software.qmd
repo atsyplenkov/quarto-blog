@@ -1,42 +1,32 @@
 ---
 title: "Software"
-echo: false
-jupyter: python3
-section-divs: false
 comments: false
+section-divs: false
+echo: false
+editor_options:
+  chunk_output_type: console
 ---
 
-```{python}
-#| label: "software"
-#| id: "software"
-#| output: asis
+Find complete list at my [{{< fa brands github >}} GitHub](https://github.com/atsyplenkov) profile.
 
-# Modified from Drew Dimmery's website
-# Dear Drew, if you reading this, thanky you very much
-# https://github.com/ddimmery/quarto-website/blob/main/software.qmd
+### 🌐 Web Apps & VS Code extensions
+| Project | Description | Language | Framework |
+|:-----------|:---------|:--------:|:---------:|
+| [`pastum`](https://github.com/atsyplenkov/pastum) | VS Code extension for inserting text tables as dataframe objects into the editor | <img width="25" height="25" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/> | |
+| [`detect-chatgpt`](https://github.com/atsyplenkov/detect-chatgpt) | Experimental app for detecting excessive word usage by ChatGPT | <img width="25" height="25" src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1"/> | <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/streamlit.png" alt="streamlit"/> |
+| [`bibtex2html`](https://github.com/atsyplenkov/bibtex2html) | App for converting bibliography references to BibTeX format | <img width="25" height="25" src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1"/> | <img height="20" src="https://shiny.posit.co/images/shiny-solo.png" alt="py-shiny"/> |
+| [`hydrotranslate`](https://github.com/atsyplenkov/hydrotranslate) | Russian-English dictionary of hydrological terms | <img width="25" height="25" src="https://img.icons8.com/fluency/48/r-project.png" alt="r-project"/> | <img height="20" src="https://shiny.posit.co/images/shiny-solo.png" alt="r-shiny"/> |
 
-import yaml
-from IPython.display import display, Markdown, HTML
 
-def button(url, str, icon):
-    icon_base = icon[:2]
-    return f"""<a class="btn btn-outline-dark btn-sm", href="{url}" target="_blank" rel="noopener noreferrer">
-        <i class="{icon_base} {icon}" role='img' aria-label='{str}'></i>
-        {str}
-    </a>"""
-    
-yaml_data = yaml.safe_load(open("software.yaml"))
+### 📦 Packages
 
-for data in yaml_data[::-1]:
-    display(Markdown("## `" + data["title"] + "` {#" + data["title"] + "}"))
-    display(Markdown('<img align="right" height="100" src="' + data["logo"] + '">'))
-    display(Markdown(data["description"]))
-    buttons = []
-    if "website" in data:
-        buttons.append(button(data['website'], "Website", "bi-info"))
-    if "github" in data:
-        buttons.append(button(data['github'], "Github", "bi-github"))
-    if "package" in data:
-        buttons.append(button(data['package'], "Package", "bi-box-seam"))
-    display(HTML(" ".join(buttons)))
-```
+| Package | Version | Description |
+|:-----------|:--------|:----------|
+| [`centerline`](https://github.com/atsyplenkov/centerline) | ![Version](https://img.shields.io/github/r-package/v/atsyplenkov/centerline?logo=r&logoColor=276DC3&label=%20&labelColor=white&color=lightgrey) | Centerline extraction and plotting for closed geometries |
+| [`tidyhydro`](https://github.com/atsyplenkov/tidyhydro) | ![Version](https://img.shields.io/github/r-package/v/atsyplenkov/tidyhydro?logo=r&logoColor=276DC3&label=%20&labelColor=white&color=lightgrey) | C++ boosted commonly used hydrological metrics for `{tidymodels}` framework |
+| [`loadflux`](https://github.com/atsyplenkov/loadflux) | ![Version](https://img.shields.io/github/r-package/v/atsyplenkov/loadflux?logo=r&logoColor=276DC3&label=%20&labelColor=white&color=lightgrey) | Tools for turbidity and event sediment transport analysis |
+| [`rusleR`](https://github.com/atsyplenkov/rusleR) | ![Version](https://img.shields.io/github/r-package/v/atsyplenkov/rusleR?logo=r&logoColor=276DC3&label=%20&labelColor=white&color=lightgrey) | Soil erosion estimation based on the RUSLE model |
+| [`rp5pik`](https://github.com/atsyplenkov/rp5pik) | ![Version](https://img.shields.io/github/r-package/v/atsyplenkov/rp5pik?logo=r&logoColor=276DC3&label=%20&labelColor=white&color=lightgrey) | Access meteorological data from pogodaiklimat.ru |
+| [`tgme`](https://github.com/atsyplenkov/tgme) | ![Version](https://img.shields.io/github/r-package/v/atsyplenkov/tgme?logo=r&logoColor=276DC3&label=%20&labelColor=white&color=lightgrey) | Send messages to Telegram from R |
+| [`HBVr`](https://github.com/atsyplenkov/HBVr) | ![Version](https://img.shields.io/github/r-package/v/atsyplenkov/HBVr?logo=r&logoColor=276DC3&label=%20&labelColor=white&color=lightgrey) | Access HBV model parameters dataset from Beck et al. (2021) |
+

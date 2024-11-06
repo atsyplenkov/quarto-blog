@@ -53,8 +53,10 @@ execute:
 
 ::: {.g-col-12 .g-col-sm-8}
 
-### Hi, my name is Anatoly!
-I did my Ph.D. at the Lomonosov Moscow State University, where I was interested in the spatio-temporal variability of sediment transport in mountain areas, and a postdoc at the Institute of Geography Russian Academy of Science, where I focused on remote sensing and geomorphology in the Caucasus. While a hydrologist and fluvial geomorphologist at the core, I am fascinated by creative ways to [visualize the data](#category=tidytuesday) (what dataviz designers do), and by transformative technologies [to extract and disseminate knowledge from data](#category=R) (what computer scientists do). My passion as a researcher is to integrate insights from these fields in a useful way to promote equitable and sustainable global access to safe water and energy.
+### Hi there 👋!
+Anatoly Tsyplenkov (Ph.D., Geo. Sci.) is a geomorphologist and software engineer based in Palmerston North, New Zealand. As a geomorphologist, he works on sediment transport and erosion processes at [Landcare Research Ltd.](https://www.landcareresearch.co.nz/), including scenario-based sediment budget and water quality modeling, landslide mitigation practices, and climate change impacts on soil erosion and sediment loads. He taught "Spatial Modeling of the Environment" at [National Research University Higher School of Economics](https://geography.hse.ru/en/), "Fundamentals of Hydrology" at [Lomonosov Moscow State University](https://www.eng.geogr.msu.ru/?changed_lang=true), and has [authored](https://scholar.google.com/citations?user=IcwW-WAAAAAJ&hl=en) more than fifty articles on fluvial geomorphology, soil erosion, and mountain hydrology. As a software engineer, he works on all things geospatial, including linear feature extraction from closed geometries, hydrological modeling tools, and R implementation of Whitebox Workflows for Python.
+
+Anatoly is an ECR at the International Association of Hydrological Sciences ([IAHS](https://iahs.info/)), an associate councilor of the World Association of Soil and Water Conservation ([WASWAC](http://www.waswac.org.cn/)), and a maintainer of dozens of R and Python libraries, web apps, and VS Code extensions at the intersection of geoscience, geospatial data, and research integrity.
 
 :::
 

@@ -31,6 +31,8 @@ website:
         href: https://github.com/atsyplenkov
       - icon: mastodon
         href: https://fosstodon.org/@atsyplenkov
+      - text: "{{< iconify simple-icons:bluesky >}}"
+        href: https://bsky.app/profile/anatolii.nz
       - icon: twitter
         href: https://twitter.com/atsyplen
       - icon: linkedin
@@ -44,6 +46,7 @@ website:
     center: |
       <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
       <span class="faux-block">[View the source at {{< fa brands github >}} GitHub]({{< var github-url >}})</span>
+      <span><a rel="me" href="https://fosstodon.org/@atsyplenkov">Mastodon</a></span>
     right: |
       <span class="faux-block"> [{{< fa solid rss >}}](/index.xml)</span>
       <span class="faux-block"> [{{< fa solid envelope >}}](mailto:atsyplenkov@gmail.com)</span>
