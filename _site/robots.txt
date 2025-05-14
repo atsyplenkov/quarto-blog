@@ -1,1 +1,55 @@
 Sitemap: https://anatolii.nz/sitemap.xml
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: BingPreview
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: Facebot
+Disallow: /
+
+User-agent: Applebot
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+User-agent: NeevaBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: *
+Disallow: /
